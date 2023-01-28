@@ -44,34 +44,21 @@ Senior level manufacturing engineer with experience improving quality, profitabi
 
 #### Education:
 
-➢ Master of Science in Data Science (expected graduation: August 2023), Willamette University
-
-➢ Bachelor of Science in Manufacturing Engineering Technology
-
-Oregon Institute of Technology, Klamath Falls, OR
-
-➢ Various Harvard ManagerMentor corporate manager skills modules
-
-➢ Various self-paced online lessons focused on Statistics, Data Science, Python, and Lean Six Sigma
+-   Master of Science in Data Science (expected graduation: August 2023), Willamette University
+-   Bachelor of Science in Manufacturing Engineering Technology,
+-   Oregon Institute of Technology, Klamath Falls, OR
+-   Various Harvard ManagerMentor corporate manager skills modules
+-   Various self-paced online lessons focused on Statistics, Data Science, Python, R, SQL, and Lean Six Sigma
 
 #### Skills and abilities:
 
-➢ Self-directed and able to manage multiple projects with changing priorities and deadlines.
-
-➢ Motivated, highly organized, and goal oriented.
-
-➢ Strong skills in interpersonal communications, composition, and technical writing.
-
-➢ Leading and participating on cost reduction projects that collaborate with various process owners.
-
-➢ Computer expertise / skill level:
-
-\- Microsoft Office Products (including Project and Visio) / proficient
-
-\- Visual Studio Code (VS Code) / advanced beginner
-
-\- Microsoft SQL Server Management Studio (SSMS) / competent
-
-\- Python, C, R, and SQL / beginner
-
-\- SAP ERP system / expert
+-   Self-directed and able to manage multiple projects with changing priorities and deadlines.
+-   Motivated, highly organized, and goal oriented.
+-   Strong skills in interpersonal communications, composition, and technical writing.
+-   Leading and participating on cost reduction projects that collaborate with various process owners.
+-   Computer expertise / skill level:
+    -   Microsoft Office Products (including Project and Visio) / proficient
+    -   Visual Studio Code (VS Code) / advanced beginner
+    -   Microsoft SQL Server Management Studio (SSMS) / competent
+    -   Python, C, R, and SQL / beginner
+    -   SAP ERP system / expert
