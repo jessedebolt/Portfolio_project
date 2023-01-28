@@ -12,11 +12,8 @@ website:
       - Resume.qmd
       - icon: linkedin
         href: www.linkedin.com/in/jessedebolt
-<<<<<<< HEAD
       - icon: github
-=======
       - icon: git
->>>>>>> 3c1c13b47e55a156cd8415bc2f5866779e00e272
         href: https://github.com/jessedebolt/Portfolio_project
 
 format:
