@@ -1,8 +1,10 @@
 {
-  "hash": "2e62899cd7e93f7ecad03ac20280e708",
+  "hash": "a24eda7ddee048c0694c26437d547df3",
   "result": {
-    "markdown": "---\ntitle: \"Portfolio\"\n---\n\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
-    "supporting": [],
+    "markdown": "[![](images/wu%20-%20logo.png){width=\"232\"}](https://willamette.edu)\n\n------------------------------------------------------------------------\n\nThis is a Quarto website.\n\n> To learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
