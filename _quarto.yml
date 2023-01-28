@@ -13,7 +13,6 @@ website:
       - icon: linkedin
         href: www.linkedin.com/in/jessedebolt
       - icon: github
-      - icon: git
         href: https://github.com/jessedebolt/Portfolio_project
 
 format:
