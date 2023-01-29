@@ -1,6 +1,6 @@
 ---
 title: "DATA502_Final_Project_draft"
-author: "Jesse DeBolt &Isaac Johnson"
+author: "Jesse DeBolt & Isaac Johnson"
 date: "2022-12-01"
 format: html
 ---

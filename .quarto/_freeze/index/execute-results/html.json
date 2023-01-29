@@ -1,10 +1,8 @@
 {
-  "hash": "a24eda7ddee048c0694c26437d547df3",
+  "hash": "8b4c8f2f6f2d9da85010c8946e43e77d",
   "result": {
-    "markdown": "[![](images/wu%20-%20logo.png){width=\"232\"}](https://willamette.edu)\n\n------------------------------------------------------------------------\n\nThis is a Quarto website.\n\n> To learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
-    "supporting": [
-      "index_files"
-    ],
+    "markdown": "[![](images/wu%20-%20logo.png){width=\"232\"}](https://willamette.edu)\n\n------------------------------------------------------------------------\n\nThis is a Quarto website.\n\n> To learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n\n[![Data Visualization Final Project](images/Rplot15.jpeg){fig-align=\"left\" width=\"480\"}](DATA502_VizFinalProject.html)\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

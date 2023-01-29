@@ -15,11 +15,14 @@ website:
       - icon: github
         href: https://github.com/jessedebolt/Portfolio_project
 
+  page-footer:
+    left: "©2021, Jesse A. DeBolt" 
+    right: "This is a Quarto website. To learn more visit [https://quarto.org/docs/websites](https://quarto.org/docs/websites)"
+    border: false
+
+    
 format:
   html:
     theme: superhero
     css: styles.css
     toc: true
-
-
-
