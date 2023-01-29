@@ -1,7 +1,7 @@
 {
-  "hash": "9435f0bcb6a91d5b3037e51fd7a5a167",
+  "hash": "948b4447b601318ae584d2819868ec65",
   "result": {
-    "markdown": "---\ntitle: \"About\"\n---\n\n\nThis site has been developed as part of the coursework requirements for GSM6027/DATA599-03, Communicating with Data at Willamette University.\n\nAll projects displayed here within were completed as part of the graduation requirements for the Masters in Data Science program. \n\n\n\n::: {.cell}\n\n:::\n",
+    "markdown": "---\ntitle: \"About\"\n---\n\n\nThis site has been developed as part of the coursework requirements for GSM6027/DATA599-03, Communicating with Data at Willamette University.\n\nAll projects displayed herein were completed as part of the graduation requirements for the Masters in Data Science program. \n\n\n\n::: {.cell}\n\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

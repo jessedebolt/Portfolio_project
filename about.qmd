@@ -4,7 +4,7 @@ title: "About"
 
 This site has been developed as part of the coursework requirements for GSM6027/DATA599-03, Communicating with Data at Willamette University.
 
-All projects displayed here within were completed as part of the graduation requirements for the Masters in Data Science program. 
+All projects displayed herein were completed as part of the graduation requirements for the Masters in Data Science program. 
 
 
 ```{r}
