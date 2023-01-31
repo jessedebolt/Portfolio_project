@@ -31,6 +31,7 @@ Included below is the different methods and techniques in code form showing the 
 
 Reading in the dataset and performing initial review of the contents within.
 ```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE, results=FALSE}
+
 library(tidyverse)
 library(skimr)
 

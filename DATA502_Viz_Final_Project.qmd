@@ -2,7 +2,9 @@
 title: "DATA502_Final_Project"
 author: "Jesse DeBolt & Isaac Johnson"
 date: "2022-12-01"
-format: html
+format: 
+    html:
+      self-contained: true
 ---
 
 
