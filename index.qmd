@@ -16,6 +16,19 @@ Clicking on the image below will take you to the step by step process used to ge
 
 [![Data Visualization Final Project](images/Rplot15.jpeg){fig-align="left" width="534"}](/DATA502_Viz_Final_Project.html)
 
+::: callout-note
+The intent of the project below was to find a Tidy Tuesday Challenge submission and recreate it and in some way expand, extend, or deviate from the original.
+
+The original inspiration was from the [#TidyTuesday Challenge submission](https://twitter.com/ryanahart/status/1618685056033366016/photo/1 "#TidyTuesday | Week 4 | Alone") by [Ryan Hart](https://twitter.com/ryanahart/status/1618685056033366016/photo/1 "Twitter: @ryanahart").
+
+Thomas Mock (2022). Tidy Tuesday: A weekly data project aimed at the R ecosystem. https://github.com/rfordatascience/tidytuesday.
+:::
+
+[![Tidy Tuesday](images/My TidyTuesday Plot.png){fig-align="left" width="534"}](/2023_01_31_tidy_tuesday.html)
+
+[![Original submission (inspiration for project above)](images/TidyTuesdayInspiration.jpg){fig-align="left" width="534"}](https://twitter.com/ryanahart/status/1618685056033366016/photo/1)
+
+
 ------------------------------------------------------------------------
 
 #### Data Engineering
