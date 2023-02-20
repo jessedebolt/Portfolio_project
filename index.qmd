@@ -1,57 +1,21 @@
-[![](images/Willamette_logo.png){fig-align="left"}](https://willamette.edu)
+---
+title: "Jesse A. DeBolt"
+about: 
+  template: trestles
+  image: /images/headshot.jpg
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/jessedebolt
+    - text: GitHub
+      href: https://github.com/jessedebolt
+    - text: Email
+      href: mailto:jessedebolt@jessedebolt@comcast.net
+        
+---
 
-------------------------------------------------------------------------
 
-------------------------------------------------------------------------
+# Hello!
+Welcome to my (very much in progress) portfolio blog. Please heck out some of my recent projects and work examples on the 'Projects' page. If you are looking to hire someone with extensive manufacturing experience and data familiarity, please check out my resume by clicking the Resume button up top.
 
-## Example projects:
-
-------------------------------------------------------------------------
-
-#### Data Visualization
-
-::: callout-note
-Clicking on the image below will take you to the step by step process used to generate an interactive plot using R and the Plotly library. This work has not been polished for publication and remains in its original form.
-:::
-
-[![Data Visualization Final Project](images/Rplot15.jpeg){fig-align="left" width="534"}](projects/DATA502_Viz_Final_Project.html)
-
-::: callout-note
-The intent of the project below was to find a Tidy Tuesday Challenge submission and recreate it and in some way expand, extend, or deviate from the original.
-
-The original inspiration was from the [#TidyTuesday Challenge submission](https://twitter.com/ryanahart/status/1618685056033366016/photo/1 "#TidyTuesday | Week 4 | Alone") by [Ryan Hart](https://twitter.com/ryanahart/status/1618685056033366016/photo/1 "Twitter: @ryanahart").
-
-Thomas Mock (2022). Tidy Tuesday: A weekly data project aimed at the R ecosystem. https://github.com/rfordatascience/tidytuesday.
-:::
-
-[![Tidy Tuesday](images/My%20TidyTuesday%20Plot.png){fig-align="left" width="534"}](projects/2023_01_31_tidy_tuesday.html)
-
-[![Original submission (inspiration for project above)](images/TidyTuesdayInspiration.jpg){fig-align="left" width="534"}](https://twitter.com/ryanahart/status/1618685056033366016/photo/1)
-
-------------------------------------------------------------------------
-
-#### Tables
-
-[![Table example using DT datatables package in R](images/DT_screenshot.png){fig-align="left" width="534"}](projects/dt_example.html)
-
-[![Table example using flextable in R](images/flextable_screenshot.png){fig-align="left" width="534"}](projects/flextable_example.html)
-
-------------------------------------------------------------------------
-
-#### Data Engineering
-
-::: callout-note
-Clicking on the image below will take you to the step by step process used to scrape data, query data, generate statistical analysis and plot results. The process involved the use of Docker and API tools, SQL using postgreSQL, R, and PowerPoint templates for poster creation. This work has not been polished for publication and remains in its original form.
-:::
-
-[![Data Engineering Final Project](images/Data503_Final_Poster-01.png){fig-align="left" width="534"}](projects/DATA503_FinalProject.html)
-
-------------------------------------------------------------------------
-
-#### Foundations of Data Science
-
-::: callout-note
-Clicking on the image below will take you to a project that involved reviewing a given data set and addressing some questions of interest. The process involved the use of R for data wrangling, analysis and visualizations. This work has not been polished for publication and remains in its original form.
-:::
-
-[![Foundations of Data Science Final Report](images/Data501_Final.png){fig-align="left" width="456"}](projects/DATA501_Final_Project.html)

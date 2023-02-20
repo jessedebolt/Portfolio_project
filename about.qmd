@@ -7,6 +7,14 @@ This site has been developed as part of the coursework requirements for GSM6027/
 All projects displayed herein were completed as part of the graduation requirements for the Masters in Data Science program. 
 
 
-```{r}
+## Work History
+#### **The beginning**
+After receiving my degree in manufacturing engineering technology I began work at a small, privately owned company that manufactured,, assembled and tested hydraulic valves and manifolds. My primary focusing was on Lean Manufacturing and manual assembly processes. It was here that I became familiar with ISO-9001 and its counterparts. I was privileged enough to be invited to participate in the development of our company's Lean Academy, working to develop and deliver training courses on several lean manufacturing concepts. These tools and philosophies included 5S, Visual Workshop, Process Standardization, Value Stream Mapping, Total Preventative Maintenance, and Setup Time Reduction, among others.
 
-```
+#### **More lean manufacturing focus**
+For my next role I was recruited to different company that manufactured electrical connectors (large quantity runs with minimal components and high quality requirements). Here I lead efforts in lean manufacturing implementation as well as process flow, specifically in regards to assembly, metal parts stamping, and chemical etching processes. I managed the kaizen tien (improvement suggestion) program which included working with stake holders across all departments. This also required working with management to justify and lead the implementation of the improvement opportunities.
+
+#### **From 'widget' manufacturing to capitol goods**
+After leaving the previous company, I was hired to work as the primary manufacturing engineer for the assembly, test, and final assembly areas of a large pump manufacturer which made products for the oil and gas industry as well as the power generation (including nuclear) and water markets. 
+
+

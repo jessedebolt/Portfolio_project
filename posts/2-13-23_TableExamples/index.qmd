@@ -1,0 +1,13 @@
+---
+title: "Table Examples"
+author: "Jesse DeBolt"
+date: "2023-01-31"
+categories: [Visualizations, Tables]
+image: "DT_screenshot.png"
+---
+
+
+[![Table example using DT datatables package in R](DT_screenshot.png){fig-align="left" width="534"}](dt_example.html)
+
+[![Table example using flextable in R](flextable_screenshot.png){fig-align="left" width="534"}](flextable_example.html)
+

@@ -1,0 +1,120 @@
+---
+title: "Interactive plot with ggiraph"
+author: "Jesse DeBolt"
+date: "2023-02-20"
+categories: [Visualizations, Interactive]
+image: "Mtcars ggiraph.png"
+---
+
+## Setup
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(ggiraph)
+library(ggthemes)
+library(viridis)
+library(lubridate)
+library(patchwork)
+
+```
+
+
+## Data setup
+```{r setup data}
+# Read in data
+data("mtcars")
+
+mtcars
+
+```
+
+
+# Initial plot
+```{r initial plot}
+cars1 <- mtcars %>% 
+  ggplot(aes(reorder(rownames(mtcars), hp), hp, 
+             tooltip = paste0("Cylinders: ",cyl), data_id = rownames(mtcars), 
+             fill = mpg, line = "black"))+
+    geom_col_interactive()+
+      theme_classic() +
+      scale_fill_viridis(option = "inferno", direction = 1, name = "MPG")+
+      coord_flip()
+
+cars1
+
+```
+
+
+# Converting to ggiraph
+```{r}
+ggiraph(ggobj = cars1, width_svg = 5, height_svg = 4)
+
+```
+
+
+# Secondary plot
+```{r secondary plot}
+cars2 <- mtcars %>% 
+  ggplot(aes(reorder(rownames(mtcars), qsec), qsec, 
+             tooltip = paste0("Displacement: ",disp), data_id = rownames(mtcars), 
+             fill = wt, line = "black"))+
+    geom_col_interactive()+
+      theme_classic() +
+      scale_fill_viridis(option = "viridis", direction = 1, name = "Weight")+
+      coord_flip()
+
+cars2
+
+```
+
+# Converting secondary to ggiraph
+```{r}
+ggiraph(ggobj = cars2, width_svg = 5, height_svg = 4)
+
+```
+
+
+## Link the two charts together
+```{r}
+girafe(code = print(cars1 + cars2), 
+       width_svg = 8, height_svg = 4) %>% 
+  girafe_options(opts_hover(css = "fill:cyan;"))
+
+```
+
+
+## Adding titles, labels and adjustments
+```{r}
+cars1 <- cars1 +
+  labs(title = "1974 Motor Trend Road Tests",
+       subtitle = "Horsepower, Miles per gallon, Number of cylinders",
+       x = "",
+       y = "Horsepower")
+
+
+cars2 <- cars2 +
+  labs(title = "1974 Motor Trend Road Tests",
+       subtitle = "Quarter-mile time, Vehicle weight, Engine displacement",
+       x = "",
+       y = "Quarter Mile Time (Seconds)")
+
+```
+
+
+# Converting updated plots to ggiraph
+```{r}
+ggiraph(ggobj = cars1, width_svg = 5, height_svg = 4)
+
+ggiraph(ggobj = cars2, width_svg = 5, height_svg = 4)
+
+
+```
+
+
+## Linking the two final charts together
+```{r}
+girafe(code = print(cars1 + cars2), 
+       width_svg = 12, height_svg = 7) %>% 
+  girafe_options(opts_hover(css = "fill:cyan;"))
+
+```

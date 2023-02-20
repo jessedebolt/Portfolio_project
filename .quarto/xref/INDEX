@@ -34,5 +34,56 @@
   },
   "projects/DATA502_Viz_Final_Project.qmd": {
     "DATA502_Viz_Final_Project.html": "f933322d"
+  },
+  "posts/2023_01_31_tidy_tuesday.qmd": {
+    "2023_01_31_tidy_tuesday.html": "e110cf3c"
+  },
+  "posts/DATA501_Final_Project.qmd": {
+    "DATA501_Final_Project.html": "b068a533"
+  },
+  "posts/DATA502_Viz_Final_Project.qmd": {
+    "DATA502_Viz_Final_Project.html": "17546800"
+  },
+  "posts/1-31-23_TidyTuesday/2023_01_31_tidy_tuesday.qmd": {
+    "2023_01_31_tidy_tuesday.html": "db4c5530"
+  },
+  "posts/1-31-23_TidyTuesday/index.qmd": {
+    "index.html": "b30f23d6"
+  },
+  "posts/2-13-23_TableExamples/index.qmd": {
+    "index.html": "d31897ec"
+  },
+  "posts/DATA501_Final_Project/DATA501_Final_Project.qmd": {
+    "DATA501_Final_Project.html": "11219e53"
+  },
+  "posts/DATA501_Final_Project/index.qmd": {
+    "index.html": "8bbdab09"
+  },
+  "posts/DATA502_Viz_Final_Project/DATA502_Viz_Final_Project.qmd": {
+    "DATA502_Viz_Final_Project.html": "df3d8fdb"
+  },
+  "posts/DATA502_Viz_Final_Project/index.qmd": {
+    "index.html": "b7cb9f6e"
+  },
+  "posts/DATA503_FinalProject/index.qmd": {
+    "index.html": "c540e425"
+  },
+  "index(OG) - Copy.qmd": {
+    "index(OG) - Copy.html": "7ca6afb9"
+  },
+  "projects.qmd": {
+    "projects.html": "fbf4b108"
+  },
+  "posts/Interactive_ggiraph_2-20-23/index.qmd": {
+    "index.html": "32e3ed3e"
+  },
+  "posts/Interactive_Plotly_2-20-23/index.qmd": {
+    "index.html": "241fc0c0"
+  },
+  "posts/Interactive_ggiraph_2-20-23/HW5_mtcars_ggiraph.qmd": {
+    "HW5_mtcars_ggiraph.html": "fd0f3cf8"
+  },
+  "posts/Interactive_Plotly_2-20-23/HW5_utilities_plotly.qmd": {
+    "HW5_utilities_plotly.html": "2ab74779"
   }
 }

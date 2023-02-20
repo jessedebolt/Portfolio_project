@@ -4,10 +4,12 @@ project:
 website:
   title: "Jesse DeBolt's Portfolio"
   navbar:
+    pinned: true
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - projects.qmd
     right:
       - Resume.qmd
       - icon: linkedin
