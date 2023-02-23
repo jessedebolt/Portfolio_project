@@ -2,7 +2,7 @@
 title: "Jesse A. DeBolt"
 about: 
   template: trestles
-  image: /images/favicon_io_superhero/android-chrome-512x512.png
+  image: /images/favicon_io_superhero_lite/android-chrome-512x512.png
   image-shape: rounded
   image-width: 15em
   links:

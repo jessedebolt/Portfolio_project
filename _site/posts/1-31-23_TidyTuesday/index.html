@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.313">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Jesse DeBolt">
 <meta name="dcterms.date" content="2023-01-31">
-
 <title>Jesse DeBolt’s Portfolio - Tidy Tuesday Recreation</title>
 <style>
 code{white-space: pre-wrap;}
@@ -87,7 +84,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -102,8 +98,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -121,18 +116,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-
-
-<link rel="stylesheet" href="../../styles.css">
+}</script><link rel="stylesheet" href="../../styles.css">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Jesse DeBolt’s Portfolio</span>
@@ -143,7 +132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
@@ -153,11 +142,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../projects.html">
- <span class="menu-text">Portfolio Blog</span></a>
+ <span class="menu-text">Projects Blog</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
     <a class="nav-link" href="../../Resume.html">
  <span class="menu-text">Resume</span></a>
   </li>  
@@ -172,35 +161,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tidytuesday" id="toc-tidytuesday" class="nav-link active" data-scroll-target="#tidytuesday">TidyTuesday</a></li>
+<li><a href="#tidytuesday" id="toc-tidytuesday" class="nav-link active" data-scroll-target="#tidytuesday">TidyTuesday</a></li>
   <li><a href="#load-the-weekly-data" id="toc-load-the-weekly-data" class="nav-link" data-scroll-target="#load-the-weekly-data">Load the weekly Data</a></li>
   <li><a href="#readme" id="toc-readme" class="nav-link" data-scroll-target="#readme">Readme</a></li>
   <li><a href="#glimpse-data" id="toc-glimpse-data" class="nav-link" data-scroll-target="#glimpse-data">Glimpse Data</a></li>
   <li><a href="#wrangle" id="toc-wrangle" class="nav-link" data-scroll-target="#wrangle">Wrangle</a></li>
   <li><a href="#visualize" id="toc-visualize" class="nav-link" data-scroll-target="#visualize">Visualize</a></li>
   <li><a href="#save-image" id="toc-save-image" class="nav-link" data-scroll-target="#save-image">Save Image</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Tidy Tuesday Recreation</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Visualizations</div>
@@ -229,18 +210,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
   
 
-</header>
-
-<section id="tidytuesday" class="level1">
-<h1>TidyTuesday</h1>
+</header><section id="tidytuesday" class="level1"><h1>TidyTuesday</h1>
 <p>Join the R4DS Online Learning Community in the weekly #TidyTuesday event! Every week we post a raw dataset, a chart or article related to that dataset, and ask you to explore the data. While the dataset will be “tamed”, it will not always be tidy! As such you might need to apply various R for Data Science techniques to wrangle the data into a true tidy format. The goal of TidyTuesday is to apply your R skills, get feedback, explore other’s work, and connect with the greater #RStats community! As such we encourage everyone of all skills to participate!</p>
-</section>
-<section id="load-the-weekly-data" class="level1">
-<h1>Load the weekly Data</h1>
+</section><section id="load-the-weekly-data" class="level1"><h1>Load the weekly Data</h1>
 <p>Download the weekly data and make available in the <code>tt</code> object.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>tt <span class="ot">&lt;-</span> <span class="fu">tt_load</span>(<span class="st">"2023-01-24"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tt</span> <span class="op">&lt;-</span> <span class="fu">tt_load</span><span class="op">(</span><span class="st">"2023-01-24"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>--- Compiling #TidyTuesday Information for 2023-01-24 ----</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
@@ -260,72 +236,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>--- Download complete ---</code></pre>
 </div>
 </div>
-</section>
-<section id="readme" class="level1">
-<h1>Readme</h1>
+</section><section id="readme" class="level1"><h1>Readme</h1>
 <p>Take a look at the readme for the weekly data to get insight on the dataset. This includes a data dictionary, source, and a link to an article on the data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-</section>
-<section id="glimpse-data" class="level1">
-<h1>Glimpse Data</h1>
+</section><section id="glimpse-data" class="level1"><h1>Glimpse Data</h1>
 <p>Take an initial look at the format of the data available.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tt <span class="sc">%&gt;%</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(glimpse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tt</span> <span class="op">%&gt;%</span> </span>
+<span>  <span class="fu">map</span><span class="op">(</span><span class="va">glimpse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-</section>
-<section id="wrangle" class="level1">
-<h1>Wrangle</h1>
+</section><section id="wrangle" class="level1"><h1>Wrangle</h1>
 <p>Explore the data and process it into a nice format for plotting! Access each dataset by name by using a dollarsign after the <code>tt</code> object and then the name of the data set.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>survivalists <span class="ot">&lt;-</span> tt<span class="sc">$</span>survivalists</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>loadouts <span class="ot">&lt;-</span> tt<span class="sc">$</span>loadouts</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>episodes <span class="ot">&lt;-</span> tt<span class="sc">$</span>episodes</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>seasons <span class="ot">&lt;-</span> tt<span class="sc">$</span>seasons</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survivalists</span> <span class="op">&lt;-</span> <span class="va">tt</span><span class="op">$</span><span class="va">survivalists</span></span>
+<span><span class="va">loadouts</span> <span class="op">&lt;-</span> <span class="va">tt</span><span class="op">$</span><span class="va">loadouts</span></span>
+<span><span class="va">episodes</span> <span class="op">&lt;-</span> <span class="va">tt</span><span class="op">$</span><span class="va">episodes</span></span>
+<span><span class="va">seasons</span> <span class="op">&lt;-</span> <span class="va">tt</span><span class="op">$</span><span class="va">seasons</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-</section>
-<section id="visualize" class="level1">
-<h1>Visualize</h1>
+</section><section id="visualize" class="level1"><h1>Visualize</h1>
 <p>Using your processed dataset, create your unique visualization.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create color palette</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">ggplot2.discrete.colour=</span> <span class="fu">c</span>(<span class="st">"#FFFF00"</span>, <span class="st">"#FF3131"</span>))</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> survivalists <span class="sc">%&gt;%</span> </span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(days_lasted, age, <span class="at">color =</span> gender))<span class="sc">+</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>          <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> days_lasted, <span class="at">y =</span> age),</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>                     <span class="at">shape =</span> <span class="dv">8</span>, <span class="at">size =</span> <span class="fl">1.8</span>, </span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>                     <span class="at">alpha =</span> <span class="fl">2.0</span>) <span class="sc">+</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>          <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>            <span class="fu">theme</span>(<span class="at">axis.line =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>                  <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                  <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>                  <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>, </span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>                                              <span class="at">vjust=</span><span class="dv">14</span>, <span class="at">hjust =</span> <span class="fl">0.625</span>),</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>                  <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>                  <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">vjust =</span> <span class="dv">18</span>, <span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>                  <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">15</span>, <span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>                  <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>                  <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="dv">10</span>),</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>                  <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>                  <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.6</span>))<span class="sc">+</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>              <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Survivalists' Age"</span>, <span class="at">y =</span> <span class="st">"Days Lasted"</span>, </span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>                   <span class="at">title =</span> <span class="st">"Alone: days lasted versus age"</span>)<span class="sc">+</span></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>              <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">50</span>))<span class="sc">+</span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>              <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">68</span>))<span class="sc">+</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>              <span class="fu">scale_color_discrete</span>(<span class="at">name =</span> <span class="st">"Gender"</span>)</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>              </span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding background</span></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbackground</span>(age,<span class="st">"night_background2.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+<details><summary>Code</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create color palette</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>ggplot2.discrete.colour<span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#FFFF00"</span>, <span class="st">"#FF3131"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">age</span> <span class="op">&lt;-</span> <span class="va">survivalists</span> <span class="op">%&gt;%</span> </span>
+<span>        <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span><span class="va">days_lasted</span>, <span class="va">age</span>, color <span class="op">=</span> <span class="va">gender</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>          <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">days_lasted</span>, y <span class="op">=</span> <span class="va">age</span><span class="op">)</span>,</span>
+<span>                     shape <span class="op">=</span> <span class="fl">8</span>, size <span class="op">=</span> <span class="fl">1.8</span>, </span>
+<span>                     alpha <span class="op">=</span> <span class="fl">2.0</span><span class="op">)</span> <span class="op">+</span></span>
+<span>          <span class="fu">theme_classic</span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
+<span>            <span class="fu">theme</span><span class="op">(</span>axis.line <span class="op">=</span> <span class="fu">element_blank</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>                  axis.ticks <span class="op">=</span> <span class="fu">element_blank</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>                  legend.position <span class="op">=</span> <span class="st">"right"</span>,</span>
+<span>                  axis.title.x <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>color <span class="op">=</span> <span class="st">"white"</span>, </span>
+<span>                                              vjust<span class="op">=</span><span class="fl">14</span>, hjust <span class="op">=</span> <span class="fl">0.625</span><span class="op">)</span>,</span>
+<span>                  axis.title.y <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>color <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span>,</span>
+<span>                  axis.text.x <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>vjust <span class="op">=</span> <span class="fl">18</span>, color <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span>,</span>
+<span>                  axis.text.y <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">15</span>, color <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span>,</span>
+<span>                  title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>color <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span>,</span>
+<span>                  legend.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>color <span class="op">=</span> <span class="st">"white"</span>, size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
+<span>                  legend.text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>color <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span>,</span>
+<span>                  plot.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>              <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Survivalists' Age"</span>, y <span class="op">=</span> <span class="st">"Days Lasted"</span>, </span>
+<span>                   title <span class="op">=</span> <span class="st">"Alone: days lasted versus age"</span><span class="op">)</span><span class="op">+</span></span>
+<span>              <span class="fu">scale_y_continuous</span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">50</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>              <span class="fu">scale_x_continuous</span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">68</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>              <span class="fu">scale_color_discrete</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Gender"</span><span class="op">)</span></span>
+<span>              </span>
+<span><span class="co"># Adding background</span></span>
+<span><span class="fu">ggbackground</span><span class="op">(</span><span class="va">age</span>,<span class="st">"night_background2.png"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="save-image" class="level1">
-<h1>Save Image</h1>
+</section><section id="save-image" class="level1"><h1>Save Image</h1>
 <p>Save your image for sharing. Be sure to use the <code>#TidyTuesday</code> hashtag in your post on twitter!</p>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
@@ -334,10 +303,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -471,13 +437,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">©2021, Jesse A. DeBolt</div>   
     <div class="nav-footer-right">This is a Quarto website. To learn more visit <a href="https://quarto.org/docs/websites">https://quarto.org/docs/websites</a></div>
   </div>
 </footer>
-
 
 
 </body></html>

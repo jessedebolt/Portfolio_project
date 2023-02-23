@@ -26,5 +26,8 @@ website:
 format:
   html:
     theme: superhero
+    code-link: true
+    code-fold: true
+    code-tools: false
     css: styles.css
     toc: true
