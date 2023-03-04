@@ -1,0 +1,98 @@
+---
+title: "Utilities - Plotly"
+format: html
+---
+
+## Setup
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(ggiraph)
+library(plotly)
+library(ggthemes)
+library(viridis)
+library(lubridate)
+
+```
+
+
+## Data setup
+```{r setup data}
+# Read in data
+utilities <- read.csv("..\\..\\data\\utilities.csv") %>% 
+        rename("Desc" = "Description.of.transaction")
+
+#convert Date to date format
+utilities$Date <- mdy(utilities$Date)
+
+# Breaking out month and year
+utilities <- utilities %>% 
+  mutate(yr_month = as.Date(cut(Date, breaks = "month"))) %>% 
+  mutate(year = as.Date(cut(Date, breaks = "year"))) %>% 
+  filter(Date < "2023/01/01")
+
+# Removing unneeded columns
+utilities <- utilities %>% 
+  filter(Desc != "Car Insurance" & Desc != "Trash")
+
+```
+
+
+## Creating averages per month and year
+```{r average data}
+utilities <- utilities %>% 
+  group_by(Desc, year) %>% 
+  mutate(avg_yearly = mean(Out))
+
+utilities <- utilities %>% 
+  group_by(Desc, yr_month) %>% 
+  mutate(avg_monthly = mean(Out))
+
+```
+
+
+## Initial plot
+```{r initial plot}
+monthly <- utilities %>% 
+  ggplot(aes(yr_month, Out, color=Desc))+
+    geom_line(size = .75)+
+      facet_wrap(~Desc)
+
+monthly
+
+```
+
+
+## Cleaning up plot
+```{r themes}
+monthly2 <- monthly + 
+  theme_solarized() +
+  labs(title = "Monthly Utility Costs 2018 through 2022",
+       subtitle = "1680sf home with family of four between 2018 and 2020\n2480sf home with family of five between 2020 and 2022",
+       x = "Date",
+       y = "Monthly Expense",
+       color = "Utility Type")+
+  theme(plot.title = element_text(hjust = 0.5, size = 14, face = 'bold', color = 'black'),
+        plot.subtitle = element_text(size = 10, face = 'italic'),
+        axis.title.x = element_text(color = 'black'),
+        axis.title.y = element_text(color = 'black'),
+        legend.position = "none")+
+  scale_y_continuous(sec.axis = sec_axis(~.))+
+  scale_color_viridis(discrete = TRUE)
+  
+monthly2
+
+```
+
+
+## Converting to plotly
+```{r plotly}
+ggmonthly <- ggplotly(monthly2) %>%
+  layout(title = list(y = .95, xref = "plot"),
+         margin = list(l = 75, t = 75, b = 75, r = 50))
+
+ggmonthly
+
+```
+
+

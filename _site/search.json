@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Jesse A. DeBolt",
     "section": "",
-    "text": "Hello!\nWelcome to my (very much in progress) portfolio blog. Please heck out some of my recent projects and work examples on the ‘Projects’ page. If you are looking to hire someone with extensive manufacturing experience and data familiarity, please check out my resume by clicking the Resume button up top."
+    "text": "Hello!\nWelcome to my portfolio blog. You can see ssome of my recent projects and work examples on the ‘Projects’ page. If you are looking to hire someone with extensive manufacturing experience and data familiarity, please take a look at my resume by clicking the Resume button up top. This site is very much in progress so check back for updates and new project examples."
   },
   {
     "objectID": "posts/1-31-23_TidyTuesday/index.html",
@@ -203,11 +203,137 @@
     "text": "Converting to plotly\n\nCodeggmonthly <- ggplotly(monthly2) %>%\n  layout(title = list(y = .95, xref = \"plot\"),\n         margin = list(l = 75, t = 75, b = 75, r = 50))\n\nggmonthly"
   },
   {
+    "objectID": "posts/presentation_2-27-23/index.html",
+    "href": "posts/presentation_2-27-23/index.html",
+    "title": "Portfolio Presentation",
+    "section": "",
+    "text": "Created with Quarto markdown and reveal.js"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-engineering-1",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-engineering-1",
+    "title": "Data Science Portfolio",
+    "section": "Data Engineering",
+    "text": "Data Engineering\n\nUsing APIs to scrape data and create SQL databases\n\nget_nps_func <- function(){\n  #Initial code for retrieving data from site\n  nps_get <- read_html('https://developer.nps.gov/api/v1/alerts?api_key=...obfuscated...')\n  \n  #Pulling the JSON data from the html(?)\n  nps_json <- nps_get %>% html_text %>% fromJSON\n  \n  #Pulling the data frame from the JSON data(?)\n  nps_data <- nps_json$data\n  \n  return(nps_data)\n}\n\n#Establish connection to local\ncon_local <- dbConnect(RPostgres::Postgres(),\n                       dbname = 'railway',\n                       host = Sys.getenv('PGHOST'),\n                       port = Sys.getenv('PGPORT'),\n                       user = Sys.getenv('PGUSER'),\n                       password = Sys.getenv('PGPASSWORD'))\n\n#Create table within local database\ndbExecute(con_local, \"CREATE TABLE IF NOT EXISTS nps_alerts(\n                      id TEXT, url TEXT,\n                      title TEXT, parkCode TEXT,\n                      description TEXT, category TEXT,\n                      lastIndexedDate TEXT, time TIMESTAMPTZ,\n                      PRIMARY KEY (id))\")\n\n#looping and sleeping\nwhile (TRUE) {\n  #Run function to gather data\n  nps_input <- get_nps_func()\n  \n  #Insert from R table created from scrape into local database\n  dbExecute (con_local, \"INSERT INTO nps_alerts\n            (id,\n             url,\n             title,\n             parkCode,\n             description,\n             category,\n             lastIndexedDate,\n             time)\n             VALUES ($1, $2, $3, $4, $5, $6, $7, current_timestamp)\n             ON CONFLICT (id) DO NOTHING\",\n             params = unname(nps_input))\n  print(\"Transaction ended, waiting for next response.\")\n  Sys.sleep(3600)\n}"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-engineering-2",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-engineering-2",
+    "title": "Data Science Portfolio",
+    "section": "Data Engineering",
+    "text": "Data Engineering\n\nCreating, structuring, and maintaining SQL databases"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-exploration-and-visualization-1",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-exploration-and-visualization-1",
+    "title": "Data Science Portfolio",
+    "section": "Data Exploration and Visualization",
+    "text": "Data Exploration and Visualization"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-exploration-and-visualization-2",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-exploration-and-visualization-2",
+    "title": "Data Science Portfolio",
+    "section": "Data Exploration and Visualization",
+    "text": "Data Exploration and Visualization"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-exploration-and-visualization-3",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-exploration-and-visualization-3",
+    "title": "Data Science Portfolio",
+    "section": "Data Exploration and Visualization",
+    "text": "Data Exploration and Visualization"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#interactive-visualizations-with-plotly",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#interactive-visualizations-with-plotly",
+    "title": "Data Science Portfolio",
+    "section": "Interactive Visualizations with Plotly",
+    "text": "Interactive Visualizations with Plotly"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#interactive-visualizations-with-plotly-1",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#interactive-visualizations-with-plotly-1",
+    "title": "Data Science Portfolio",
+    "section": "Interactive Visualizations with Plotly",
+    "text": "Interactive Visualizations with Plotly"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#interactive-visualizations-with-ggiraph",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#interactive-visualizations-with-ggiraph",
+    "title": "Data Science Portfolio",
+    "section": "Interactive Visualizations with ggiraph",
+    "text": "Interactive Visualizations with ggiraph"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#tables-1",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#tables-1",
+    "title": "Data Science Portfolio",
+    "section": "Tables",
+    "text": "Tables"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#tables-2",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#tables-2",
+    "title": "Data Science Portfolio",
+    "section": "Tables",
+    "text": "Tables"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#contact-me",
+    "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#contact-me",
+    "title": "Data Science Portfolio",
+    "section": "Contact me:",
+    "text": "Contact me:\n\nLinkedIn: https://www.linkedin.com/in/jessedebolt\nGithub: https://github.com/jessedebolt/Portfolio_project\nWebsite: https://jessedebolt-portfolio.netlify.app/\nEmail: jessedebolt@comcast.net"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html",
+    "href": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html",
+    "title": "Utilities - Plotly",
+    "section": "",
+    "text": "Codeknitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   1.0.0 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.5.0 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nCodelibrary(ggiraph)\nlibrary(plotly)\n\n\nAttaching package: 'plotly'\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\nThe following object is masked from 'package:stats':\n\n    filter\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\nCodelibrary(ggthemes)\nlibrary(viridis)\n\nLoading required package: viridisLite\n\nCodelibrary(lubridate)\n\nLoading required package: timechange\n\nAttaching package: 'lubridate'\n\nThe following objects are masked from 'package:base':\n\n    date, intersect, setdiff, union"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#data-setup",
+    "href": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#data-setup",
+    "title": "Utilities - Plotly",
+    "section": "Data setup",
+    "text": "Data setup\n\nCode# Read in data\nutilities <- read.csv(\"..\\\\..\\\\data\\\\utilities.csv\") %>% \n        rename(\"Desc\" = \"Description.of.transaction\")\n\n#convert Date to date format\nutilities$Date <- mdy(utilities$Date)\n\n# Breaking out month and year\nutilities <- utilities %>% \n  mutate(yr_month = as.Date(cut(Date, breaks = \"month\"))) %>% \n  mutate(year = as.Date(cut(Date, breaks = \"year\"))) %>% \n  filter(Date < \"2023/01/01\")\n\n# Removing unneeded columns\nutilities <- utilities %>% \n  filter(Desc != \"Car Insurance\" & Desc != \"Trash\")"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#creating-averages-per-month-and-year",
+    "href": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#creating-averages-per-month-and-year",
+    "title": "Utilities - Plotly",
+    "section": "Creating averages per month and year",
+    "text": "Creating averages per month and year\n\nCodeutilities <- utilities %>% \n  group_by(Desc, year) %>% \n  mutate(avg_yearly = mean(Out))\n\nutilities <- utilities %>% \n  group_by(Desc, yr_month) %>% \n  mutate(avg_monthly = mean(Out))"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#initial-plot",
+    "href": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#initial-plot",
+    "title": "Utilities - Plotly",
+    "section": "Initial plot",
+    "text": "Initial plot\n\nCodemonthly <- utilities %>% \n  ggplot(aes(yr_month, Out, color=Desc))+\n    geom_line(size = .75)+\n      facet_wrap(~Desc)\n\nmonthly"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#cleaning-up-plot",
+    "href": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#cleaning-up-plot",
+    "title": "Utilities - Plotly",
+    "section": "Cleaning up plot",
+    "text": "Cleaning up plot\n\nCodemonthly2 <- monthly + \n  theme_solarized() +\n  labs(title = \"Monthly Utility Costs 2018 through 2022\",\n       subtitle = \"1680sf home with family of four between 2018 and 2020\\n2480sf home with family of five between 2020 and 2022\",\n       x = \"Date\",\n       y = \"Monthly Expense\",\n       color = \"Utility Type\")+\n  theme(plot.title = element_text(hjust = 0.5, size = 14, face = 'bold', color = 'black'),\n        plot.subtitle = element_text(size = 10, face = 'italic'),\n        axis.title.x = element_text(color = 'black'),\n        axis.title.y = element_text(color = 'black'),\n        legend.position = \"none\")+\n  scale_y_continuous(sec.axis = sec_axis(~.))+\n  scale_color_viridis(discrete = TRUE)\n  \nmonthly2"
+  },
+  {
+    "objectID": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#converting-to-plotly",
+    "href": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#converting-to-plotly",
+    "title": "Utilities - Plotly",
+    "section": "Converting to plotly",
+    "text": "Converting to plotly\n\nCodeggmonthly <- ggplotly(monthly2) %>%\n  layout(title = list(y = .95, xref = \"plot\"),\n         margin = list(l = 75, t = 75, b = 75, r = 50))\n\nggmonthly"
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects Blog",
     "section": "",
-    "text": "Interactive plot with ggiraph\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nInteractive plot with Plotly\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nTidy Tuesday Recreation\n\n\n\n\n\n\n\nVisualizations\n\n\nTidy Tuesday\n\n\n\n\n\n\n\n\n\n\n\nJan 31, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nTable Examples\n\n\n\n\n\n\n\nVisualizations\n\n\nTables\n\n\n\n\n\n\n\n\n\n\n\n\nJan 31, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nData Science Fundementals (DATA-501)\n\n\n\n\n\n\n\nEngineering\n\n\nAnalysis\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nData Visualization (DATA-502)\n\n\n\n\n\n\n\nExploritory\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt & Issac Johnson\n\n\n\n\n\n\n  \n\n\n\n\nData Engineering Fundementals (DATA-503)\n\n\n\n\n\n\n\nEngineering\n\n\nDocker\n\n\nAPI\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt\n\n\n\n\n\n\nNo matching items"
+    "text": "Portfolio Presentation\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 27, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nInteractive plot with ggiraph\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nInteractive plot with Plotly\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nTidy Tuesday Recreation\n\n\n\n\n\n\n\nVisualizations\n\n\nTidy Tuesday\n\n\n\n\n\n\n\n\n\n\n\nJan 31, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nTable Examples\n\n\n\n\n\n\n\nVisualizations\n\n\nTables\n\n\n\n\n\n\n\n\n\n\n\n\nJan 31, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nData Science Fundementals (DATA-501)\n\n\n\n\n\n\n\nEngineering\n\n\nAnalysis\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nData Visualization (DATA-502)\n\n\n\n\n\n\n\nExploritory\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt & Issac Johnson\n\n\n\n\n\n\n  \n\n\n\n\nData Engineering Fundementals (DATA-503)\n\n\n\n\n\n\n\nEngineering\n\n\nDocker\n\n\nAPI\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Resume.html",

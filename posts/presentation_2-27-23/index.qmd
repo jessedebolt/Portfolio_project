@@ -1,0 +1,9 @@
+---
+title: "Portfolio Presentation"
+author: "Jesse DeBolt"
+date: "2023-02-27"
+categories: [Visualizations, Interactive]
+image: "presentation_screenshot.png"
+---
+Created with Quarto markdown and reveal.js
+[![](presentation_screenshot.png)](../../presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.qmd)

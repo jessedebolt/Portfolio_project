@@ -11,11 +11,11 @@ about:
     - text: GitHub
       href: https://github.com/jessedebolt
     - text: Email
-      href: mailto:jessedebolt@jessedebolt@comcast.net
+      href: mailto:jessedebolt@comcast.net
         
 ---
 
 
 # Hello!
-Welcome to my (very much in progress) portfolio blog. Please heck out some of my recent projects and work examples on the 'Projects' page. If you are looking to hire someone with extensive manufacturing experience and data familiarity, please check out my resume by clicking the Resume button up top.
+Welcome to my portfolio blog. You can see ssome of my recent projects and work examples on the 'Projects' page. If you are looking to hire someone with extensive manufacturing experience and data familiarity, please take a look at my resume by clicking the Resume button up top. This site is very much in progress so check back for updates and new project examples.
 
