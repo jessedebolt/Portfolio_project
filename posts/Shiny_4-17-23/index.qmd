@@ -3,7 +3,7 @@ title: "Portfolio Presentation"
 author: "Jesse DeBolt"
 date: "2023-04-17"
 categories: [Visualizations, Interactive]
-image: "ShinyDual.png"
+image: "Shiny_dualSmall.png"
 ---
 Created with Quarto markdown and reveal.js
-[![](ShinyMap_ScreenShot.png)](https://jessedebolt.shinyapps.io/ShinyCollegeApp/)
+[![](Shiny_dualSmall.png)](https://jessedebolt.shinyapps.io/ShinyCollegeApp/)
