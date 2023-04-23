@@ -1,0 +1,10 @@
+---
+title: "Communicating with Data Final Video Presentation"
+author: "Jesse DeBolt"
+date: "2023-04-24"
+categories: [Demonstration, Video, Visualizations]
+image: "Final_Presentation_Video.png"
+---
+An end of semester presentation detailing some of the work complete in the Communicating with Data course available through Willamette University's MSDS program. Topics are focused around the R programming language and include examples of interactive plots, presentations, version control with Git/Github, portfolio creation, and web application development with Shiny.
+
+[![](Final_Presentation_Video.png)](https://youtu.be/Mi6_NRsHahU)

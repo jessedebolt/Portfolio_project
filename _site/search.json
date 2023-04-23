@@ -210,6 +210,20 @@
     "text": "Created with Quarto markdown and reveal.js"
   },
   {
+    "objectID": "posts/Shiny_4-17-23/index.html",
+    "href": "posts/Shiny_4-17-23/index.html",
+    "title": "Shiny Application",
+    "section": "",
+    "text": "Powerful interactive web application developed in R with the ‘Shiny’ package"
+  },
+  {
+    "objectID": "posts/Video_Presentaiton_4-24-23/index.html",
+    "href": "posts/Video_Presentaiton_4-24-23/index.html",
+    "title": "Communicating with Data Final Video Presentation",
+    "section": "",
+    "text": "An end of semester presentation detailing some of the work complete in the Communicating with Data course available through Willamette University’s MSDS program. Topics are focused around the R programming language and include examples of interactive plots, presentations, version control with Git/Github, portfolio creation, and web application development with Shiny."
+  },
+  {
     "objectID": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-engineering-1",
     "href": "presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.html#data-engineering-1",
     "title": "Data Science Portfolio",
@@ -291,7 +305,7 @@
     "href": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html",
     "title": "Utilities - Plotly",
     "section": "",
-    "text": "Codeknitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   1.0.0 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.5.0 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nCodelibrary(ggiraph)\nlibrary(plotly)\n\n\nAttaching package: 'plotly'\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\nThe following object is masked from 'package:stats':\n\n    filter\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\nCodelibrary(ggthemes)\nlibrary(viridis)\n\nLoading required package: viridisLite\n\nCodelibrary(lubridate)\n\nLoading required package: timechange\n\nAttaching package: 'lubridate'\n\nThe following objects are masked from 'package:base':\n\n    date, intersect, setdiff, union"
+    "text": "Codeknitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.0     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.1.8\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n\nCodelibrary(ggiraph)\nlibrary(plotly)\n\n\nAttaching package: 'plotly'\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\nThe following object is masked from 'package:stats':\n\n    filter\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\nCodelibrary(ggthemes)\nlibrary(viridis)\n\nLoading required package: viridisLite\n\nCodelibrary(lubridate)"
   },
   {
     "objectID": "presentations/Feb-27-23_self_presentation/HW5_utilities_plotly.html#data-setup",
@@ -329,11 +343,88 @@
     "text": "Converting to plotly\n\nCodeggmonthly <- ggplotly(monthly2) %>%\n  layout(title = list(y = .95, xref = \"plot\"),\n         margin = list(l = 75, t = 75, b = 75, r = 50))\n\nggmonthly"
   },
   {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-engineering-1",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-engineering-1",
+    "title": "Communicating With Data Course Summary",
+    "section": "Data Engineering",
+    "text": "Data Engineering\n\nUsing APIs to scrape data and create SQL databases\n\nget_nps_func <- function(){\n  #Initial code for retrieving data from site\n  nps_get <- read_html('https://developer.nps.gov/api/v1/alerts?api_key=...obfuscated...')\n  \n  #Pulling the JSON data from the html(?)\n  nps_json <- nps_get %>% html_text %>% fromJSON\n  \n  #Pulling the data frame from the JSON data(?)\n  nps_data <- nps_json$data\n  \n  return(nps_data)\n}\n\n#Establish connection to local\ncon_local <- dbConnect(RPostgres::Postgres(),\n                       dbname = 'railway',\n                       host = Sys.getenv('PGHOST'),\n                       port = Sys.getenv('PGPORT'),\n                       user = Sys.getenv('PGUSER'),\n                       password = Sys.getenv('PGPASSWORD'))\n\n#Create table within local database\ndbExecute(con_local, \"CREATE TABLE IF NOT EXISTS nps_alerts(\n                      id TEXT, url TEXT,\n                      title TEXT, parkCode TEXT,\n                      description TEXT, category TEXT,\n                      lastIndexedDate TEXT, time TIMESTAMPTZ,\n                      PRIMARY KEY (id))\")\n\n#looping and sleeping\nwhile (TRUE) {\n  #Run function to gather data\n  nps_input <- get_nps_func()\n  \n  #Insert from R table created from scrape into local database\n  dbExecute (con_local, \"INSERT INTO nps_alerts\n            (id,\n             url,\n             title,\n             parkCode,\n             description,\n             category,\n             lastIndexedDate,\n             time)\n             VALUES ($1, $2, $3, $4, $5, $6, $7, current_timestamp)\n             ON CONFLICT (id) DO NOTHING\",\n             params = unname(nps_input))\n  print(\"Transaction ended, waiting for next response.\")\n  Sys.sleep(3600)\n}"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-engineering-2",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-engineering-2",
+    "title": "Communicating With Data Course Summary",
+    "section": "Data Engineering",
+    "text": "Data Engineering\n\nCreating, structuring, and maintaining SQL databases"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-exploration-and-visualization-1",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-exploration-and-visualization-1",
+    "title": "Communicating With Data Course Summary",
+    "section": "Data Exploration and Visualization",
+    "text": "Data Exploration and Visualization"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-exploration-and-visualization-2",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-exploration-and-visualization-2",
+    "title": "Communicating With Data Course Summary",
+    "section": "Data Exploration and Visualization",
+    "text": "Data Exploration and Visualization"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-exploration-and-visualization-3",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#data-exploration-and-visualization-3",
+    "title": "Communicating With Data Course Summary",
+    "section": "Data Exploration and Visualization",
+    "text": "Data Exploration and Visualization"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#interactive-visualizations-with-plotly",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#interactive-visualizations-with-plotly",
+    "title": "Communicating With Data Course Summary",
+    "section": "Interactive Visualizations with Plotly",
+    "text": "Interactive Visualizations with Plotly"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#interactive-visualizations-with-plotly-1",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#interactive-visualizations-with-plotly-1",
+    "title": "Communicating With Data Course Summary",
+    "section": "Interactive Visualizations with Plotly",
+    "text": "Interactive Visualizations with Plotly"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#interactive-visualizations-with-ggiraph",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#interactive-visualizations-with-ggiraph",
+    "title": "Communicating With Data Course Summary",
+    "section": "Interactive Visualizations with ggiraph",
+    "text": "Interactive Visualizations with ggiraph"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#tables-1",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#tables-1",
+    "title": "Communicating With Data Course Summary",
+    "section": "Tables",
+    "text": "Tables"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#tables-2",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#tables-2",
+    "title": "Communicating With Data Course Summary",
+    "section": "Tables",
+    "text": "Tables"
+  },
+  {
+    "objectID": "presentations/Final_Presentation/April-21-23_Final_presentation.html#contact-me",
+    "href": "presentations/Final_Presentation/April-21-23_Final_presentation.html#contact-me",
+    "title": "Communicating With Data Course Summary",
+    "section": "Contact me:",
+    "text": "Contact me:\n\nLinkedIn: https://www.linkedin.com/in/jessedebolt\nGithub: https://github.com/jessedebolt/Portfolio_project\nWebsite: https://jessedebolt-portfolio.netlify.app/\nEmail: jessedebolt@comcast.net"
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects Blog",
     "section": "",
-    "text": "Portfolio Presentation\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nApr 17, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nPortfolio Presentation\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 27, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nInteractive plot with ggiraph\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nInteractive plot with Plotly\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nTidy Tuesday Recreation\n\n\n\n\n\n\n\nVisualizations\n\n\nTidy Tuesday\n\n\n\n\n\n\n\n\n\n\n\nJan 31, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nTable Examples\n\n\n\n\n\n\n\nVisualizations\n\n\nTables\n\n\n\n\n\n\n\n\n\n\n\n\nJan 31, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nData Science Fundementals (DATA-501)\n\n\n\n\n\n\n\nEngineering\n\n\nAnalysis\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nData Visualization (DATA-502)\n\n\n\n\n\n\n\nExploritory\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt & Issac Johnson\n\n\n\n\n\n\n  \n\n\n\n\nData Engineering Fundementals (DATA-503)\n\n\n\n\n\n\n\nEngineering\n\n\nDocker\n\n\nAPI\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt\n\n\n\n\n\n\nNo matching items"
+    "text": "Communicating with Data Final Video Presentation\n\n\n\n\n\n\n\nDemonstration\n\n\nVideo\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nApr 24, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nShiny Application\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nApr 17, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nPortfolio Presentation\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 27, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nInteractive plot with ggiraph\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nInteractive plot with Plotly\n\n\n\n\n\n\n\nVisualizations\n\n\nInteractive\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nTidy Tuesday Recreation\n\n\n\n\n\n\n\nVisualizations\n\n\nTidy Tuesday\n\n\n\n\n\n\n\n\n\n\n\nJan 31, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nTable Examples\n\n\n\n\n\n\n\nVisualizations\n\n\nTables\n\n\n\n\n\n\n\n\n\n\n\n\nJan 31, 2023\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nData Science Fundementals (DATA-501)\n\n\n\n\n\n\n\nEngineering\n\n\nAnalysis\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt\n\n\n\n\n\n\n  \n\n\n\n\nData Visualization (DATA-502)\n\n\n\n\n\n\n\nExploritory\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt & Issac Johnson\n\n\n\n\n\n\n  \n\n\n\n\nData Engineering Fundementals (DATA-503)\n\n\n\n\n\n\n\nEngineering\n\n\nDocker\n\n\nAPI\n\n\nVisualizations\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nJesse DeBolt\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Resume.html",
@@ -348,12 +439,5 @@
     "title": "Resume",
     "section": "",
     "text": "Professional Experience:\n\n➢ Supervisor: Manufacturing Engineering and Cost Estimation\n\nSulzer Pumps (US), Inc. (Portland, Oregon)\nOctober, 2020 to July 1, 2022\n\nManaged a department of up to 15 coworkers in four different disciplines across three separate entities.\nChampioned multiple continuous improvement projects working with multiple department representative across several areas including manufacturing, purchasing, engineering, quality, and sales.\nLed the development of a new cost system configurator and costing database tool that enabled the simple selection of product and options, producing final cost estimates with accurate results.\n\n➢ Senior Manufacturing Engineer/Cost System Analyst\n\nSulzer Pumps (US), Inc. (Portland, Oregon)\nMarch, 2006 to October, 2020\n\nCreated and maintained standard operating procedures in compliance with ISO 9001.\nSupported Sales by creating accurate cost estimations for all engineered products based on customer specifications and engineering reviews.\nManaged large scale project to support in-house cost estimating software.\nAssisted in the development and maintenance of several databases of standard material costs and manufacturing labor hours to ensure accurate information for estimating future projects resulting in a 95% reduction in shop floor routing generation lead-time.\n\n\n➢ Process Engineer II – Lean Manufacturing\n\nJAE Oregon, Inc. (Tualatin, Oregon)\nOctober, 2003 to March, 2006\n\nTrained and managed various improvement teams including Value Stream Mapping, 5S, One Piece Flow, Standardized Work, and Setup Reduction.\nManaged improvement suggestion (Kaizen Teian) program and made improvements resulting in a 130% increase in employee participation.\nReduced inventory of consumable materials 75% and test materials 30% by establishing a Kanban system for each.\n\n\n➢ Manufacturing Engineer/Lean Facilitator\n\nSauer-Danfoss Company, formerly Compact Controls (Hillsboro, Oregon)\n\nFebruary, 1999 to October, 2003\n\nDeveloped, with a team of worldwide trainers, various lean manufacturing courses.\nCreated and maintained various documents in accordance with ISO 9001.\\\nReviewed engineering change documents, conducted process FMEAs, maintained routings in MRP system, and facilitated implementation of new and transferred products into assembly.\n\n\n\n\n\n\nGoals:\nSenior level manufacturing engineer with experience improving quality, profitability, and process flows within both high yield manufacturing and engineered capital goods markets. Working to expand knowledge and experience in the field of data sciences, specifically data engineering.\n\n\nEducation:\n\nMaster of Science in Data Science (expected graduation: August 2023), Willamette University\nBachelor of Science in Manufacturing Engineering Technology,\nOregon Institute of Technology, Klamath Falls, OR\nVarious Harvard ManagerMentor corporate manager skills modules\nVarious self-paced online lessons focused on Statistics, Data Science, Python, R, SQL, and Lean Six Sigma\n\n\n\nSkills and abilities:\n\nSelf-directed and able to manage multiple projects with changing priorities and deadlines.\nMotivated, highly organized, and goal oriented.\nStrong skills in interpersonal communications, composition, and technical writing.\nLeading and participating on cost reduction projects that collaborate with various process owners.\nComputer expertise / skill level:\n\nMicrosoft Office Products (including Project and Visio) / proficient\nVisual Studio Code (VS Code) / advanced beginner\nMicrosoft SQL Server Management Studio (SSMS) / competent\nPython, C, R, and SQL / beginner\nSAP ERP system / expert"
-  },
-  {
-    "objectID": "posts/Shiny_4-17-23/index.html",
-    "href": "posts/Shiny_4-17-23/index.html",
-    "title": "Portfolio Presentation",
-    "section": "",
-    "text": "Created with Quarto markdown and reveal.js"
   }
 ]

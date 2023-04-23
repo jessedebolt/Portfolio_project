@@ -1,0 +1,155 @@
+---
+title: "Communicating With Data Course Summary"
+title-slide-attributes: 
+  data-background-image: "images/vid_snap.png"
+  data-background-opacity: "0.8"
+author: "Jesse DeBolt"
+execute:
+  echo: false
+format: 
+  revealjs: 
+    theme: beige
+    transition: convex
+    background-transition: fade
+    preview-links: true
+    scrollable: true
+    slide-number: c/t
+    code-fold: true
+---
+
+# About me: {background-video="images/background.mp4" background-video-loop="true" background-video-muted="true" background-opacity=".8" .smaller}
+::: {.incremental .smaller .bold}
+- 22 years experience as a manufacturing engineer
+  - 8+ years implementing lean manufacturing
+  - 12+ years cost estimation and analysis
+- Currently working towards a master's degree in data science
+  - Data engineering
+  - Data visualization
+  - Data wrangling
+  - And much more...
+:::
+
+# Work examples:
+
+# Data Engineering
+
+## Data Engineering  
+- Using APIs to scrape data and create SQL databases
+```
+get_nps_func <- function(){
+  #Initial code for retrieving data from site
+  nps_get <- read_html('https://developer.nps.gov/api/v1/alerts?api_key=...obfuscated...')
+  
+  #Pulling the JSON data from the html(?)
+  nps_json <- nps_get %>% html_text %>% fromJSON
+  
+  #Pulling the data frame from the JSON data(?)
+  nps_data <- nps_json$data
+  
+  return(nps_data)
+}
+
+#Establish connection to local
+con_local <- dbConnect(RPostgres::Postgres(),
+                       dbname = 'railway',
+                       host = Sys.getenv('PGHOST'),
+                       port = Sys.getenv('PGPORT'),
+                       user = Sys.getenv('PGUSER'),
+                       password = Sys.getenv('PGPASSWORD'))
+
+#Create table within local database
+dbExecute(con_local, "CREATE TABLE IF NOT EXISTS nps_alerts(
+                      id TEXT, url TEXT,
+                      title TEXT, parkCode TEXT,
+                      description TEXT, category TEXT,
+                      lastIndexedDate TEXT, time TIMESTAMPTZ,
+                      PRIMARY KEY (id))")
+
+#looping and sleeping
+while (TRUE) {
+  #Run function to gather data
+  nps_input <- get_nps_func()
+  
+  #Insert from R table created from scrape into local database
+  dbExecute (con_local, "INSERT INTO nps_alerts
+            (id,
+             url,
+             title,
+             parkCode,
+             description,
+             category,
+             lastIndexedDate,
+             time)
+             VALUES ($1, $2, $3, $4, $5, $6, $7, current_timestamp)
+             ON CONFLICT (id) DO NOTHING",
+             params = unname(nps_input))
+  print("Transaction ended, waiting for next response.")
+  Sys.sleep(3600)
+}
+```
+
+## Data Engineering  
+- Creating, structuring, and maintaining SQL databases
+![](images/db_structure.png)
+
+# Data Exploration and Visualization
+
+## Data Exploration and Visualization
+![](images/box-plot.png)
+
+## Data Exploration and Visualization
+![](images/facet-bar.png)
+
+## Data Exploration and Visualization
+![](images/GroupedVariables_ScatterMatrix.png)
+
+# Interactive Visualizations
+
+## Interactive Visualizations with Plotly
+<iframe 
+  width="1000" 
+  height="500" 
+  src="images/Final_plotly.html">
+</iframe>
+
+## Interactive Visualizations with Plotly
+<iframe 
+  width="1000" 
+  height="500" 
+  src="images/utils.html">
+</iframe>
+
+## Interactive Visualizations with ggiraph
+<iframe 
+  width="1000" 
+  height="500" 
+  src="images/ggiraph_cars.html">
+</iframe>
+
+# Tables
+
+## Tables
+<iframe 
+  width="1000" 
+  height="500" 
+  src="flextable_example.html">
+</iframe>
+
+## Tables
+<iframe 
+  width="1000" 
+  height="500" 
+  src="dt_example.html">
+</iframe>
+
+# More to come!
+See my complete portfolio at 
+[https://jessedebolt-portfolio.netlify.app/](https://jessedebolt-portfolio.netlify.app/)
+
+## Contact me:
+ - LinkedIn: [https://www.linkedin.com/in/jessedebolt](https://www.linkedin.com/in/jessedebolt)
+ - Github: [https://github.com/jessedebolt/Portfolio_project](https://github.com/jessedebolt/Portfolio_project)
+ - Website: [https://jessedebolt-portfolio.netlify.app/](https://jessedebolt-portfolio.netlify.app/)
+ - Email: jessedebolt@comcast.net
+     
+     

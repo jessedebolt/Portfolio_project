@@ -1,9 +1,9 @@
 ---
-title: "Portfolio Presentation"
+title: "Shiny Application"
 author: "Jesse DeBolt"
 date: "2023-04-17"
 categories: [Visualizations, Interactive]
 image: "Shiny_dualSmall.png"
 ---
-Created with Quarto markdown and reveal.js
+Powerful interactive web application developed in R with the 'Shiny' package
 [![](Shiny_dualSmall.png)](https://jessedebolt.shinyapps.io/ShinyCollegeApp/)
