@@ -2,8 +2,9 @@
 title: "Portfolio Presentation"
 author: "Jesse DeBolt"
 date: "2023-02-27"
-categories: [Visualizations, Interactive]
+categories: [Visualizations, Interactive, Demonstration, Tables, Exploratory]
 image: "presentation_screenshot.png"
 ---
-Created with Quarto markdown and reveal.js
+A showcase of some of my work as a single presentation created with Quarto markdown and reveal.js
+
 [![](presentation_screenshot.png)](../../presentations/Feb-27-23_self_presentation/Feb-27-23_self_presentation.qmd)

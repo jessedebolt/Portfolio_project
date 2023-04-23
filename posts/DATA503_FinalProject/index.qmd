@@ -6,7 +6,6 @@ categories: [Engineering, Docker, API, Visualizations]
 image: "DATA503_Final_Poster-01.png"
 ---
 
-Clicking on the image below will take you to a project that involved reviewing a given data set and addressing some questions of interest. The process involved the use of R for data wrangling, analysis and visualizations. This work has not been polished for publication and remains in its original form.
-
+A project that involved reviewing a given data set and addressing some questions of interest. The process involved the use of R for data wrangling, analysis and visualizations. This work has not been polished for publication and remains in its original form.
 
 [![Foundations of Data Science Final Report](Data503_Final_Poster-01.png){fig-align="left" width="456"}](DATA503_FinalProject.html)

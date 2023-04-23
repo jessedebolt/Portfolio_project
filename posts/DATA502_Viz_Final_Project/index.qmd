@@ -2,11 +2,11 @@
 title: "Data Visualization (DATA-502)"
 author: "Jesse DeBolt & Issac Johnson"
 date: "2022-12-09"
-categories: [Exploritory, Visualizations]
+categories: [Exploratory, Visualizations, Engineering, Interactive]
 image: "Rplot15.jpeg"
 ---
 
-
+An exploratory project that included some basic data wrangling, analysis, and various visualization techniques with a final output of an interactive plot.
 
 # Prep
 ```{r, message=FALSE}
