@@ -16,6 +16,9 @@ about:
 ---
 
 
-# Hello!
-Welcome to my portfolio blog. You can see some of my recent projects and work examples on the 'Projects' page. If you are looking to hire someone with extensive manufacturing experience and data familiarity, please take a look at my resume by clicking the Resume button up top. This site is very much in progress so check back for updates and new project examples.
+Hi there! My name is Jesse DeBolt and I am a skilled manufacturing engineer with over 20 years of experience in various manufacturing settings. While working at my previous employer, I had the opportunity to work with different business data in a cost estimation capacity. This experience sparked my interest in data sciences and prompted me to begin learning SQL techniques, data mining, and analysis.
+
+After leaving my previous role due to a plant closure, I decided to pursue a master’s degree in data science with a focus on data engineering, analysis, visualization, and data communication. I am set to graduate in August 2023 and am actively seeking professional opportunities to utilize my newly acquired knowledge.
+
+Aside from my passion for data science, I enjoy hiking, listening to music, and working on home improvement and remodel projects. I am a friendly and approachable individual who values professionalism and collaboration in the workplace. I am excited to apply my expertise and work alongside other professionals to achieve mutual success.
 
