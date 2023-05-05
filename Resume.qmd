@@ -3,62 +3,70 @@ title: "Resume"
 editor: visual
 ---
 
+#### Professional Summary:
+
+As an experienced engineer and data science student, I possess a keen ability to identify process improvement opportunities and visualize complex concepts. My experience includes successfully communicating key performance indicators to stakeholders through a variety of methods. Additionally, as a data science student, I have gained valuable skills in data analysis, visualization, and data wrangling. I am now seeking a career pivot to apply my skills as part of a collaborative team focused on data analysis and effective communication strategies.
+
 #### **Professional Experience:**
 
--   ➢ Supervisor: Manufacturing Engineering and Cost Estimation
+-   **Supervisor: Manufacturing Engineering and Cost Estimation**
 
     -   Sulzer Pumps (US), Inc. (Portland, Oregon)
     -   October, 2020 to July 1, 2022
         -   Managed a department of up to 15 coworkers in four different disciplines across three separate entities.
-        -   Championed multiple continuous improvement projects working with multiple department representative across several areas including manufacturing, purchasing, engineering, quality, and sales.
-        -   Led the development of a new cost system configurator and costing database tool that enabled the simple selection of product and options, producing final cost estimates with accurate results.
+        -   Championed multiple continuous improvement projects working with various department representatives across several areas including manufacturing, purchasing, engineering, quality, and sales.
+        -   Successfully managed a large-scale project to create a new cost system configurator and costing database tool that enabled the selection of product and options, producing final cost estimates with accurate results.
+        -   Collaborated with internal departments and external suppliers to ensure compliance with design and quality requirements while meeting production milestones.
+        -   Maintained departmental key performance indicators (KPIs) and reported monthly results to management.
 
--   ➢ Senior Manufacturing Engineer/Cost System Analyst
+-   **Senior Manufacturing Engineer/Cost System Analyst**
 
     -   Sulzer Pumps (US), Inc. (Portland, Oregon)
     -   March, 2006 to October, 2020
-        -   Created and maintained standard operating procedures in compliance with ISO 9001.
-        -   Supported Sales by creating accurate cost estimations for all engineered products based on customer specifications and engineering reviews.
-        -   Managed large scale project to support in-house cost estimating software.
-        -   Assisted in the development and maintenance of several databases of standard material costs and manufacturing labor hours to ensure accurate information for estimating future projects resulting in a 95% reduction in shop floor routing generation lead-time.
+        -   Led the design and development of a routing generator tool that reduced shop floor routing generation lead-time by 95%, resulting in significant cost savings.
+        -   Collaborated with cross-functional teams to drive continuous improvement initiatives, leveraging data-driven insights from Value Stream Mapping, 5S, Ishikawa, and A3 (PDCA) methodologies.
+        -   Orchestrated shop floor operations to minimize lead-time and costs for large-scale orders, including ASME Section III Nuclear and NQA-1 specifications, using lean principles and data analysis techniques.
+        -   Developed and maintained ISO 9001-compliant standard operating procedures, incorporating data analytics to identify and address areas for improvement.
+        -   Supported Sales by creating cost estimations with an average accuracy of 90% and on-time delivery of 98% for engineered products based on customer specifications and engineering reviews.
+        -   Played a key role in technology transfer projects to ensure successful knowledge transfer and adoption of new product lines across legal entities.
+        -   Contributed to the development and maintenance of databases for material costs and manufacturing labor hour standards to ensure accurate information for estimating future projects.
 
--   ➢ Process Engineer II -- Lean Manufacturing
+-   **Process Engineer II -- Lean Manufacturing**
 
     -   JAE Oregon, Inc. (Tualatin, Oregon)
     -   October, 2003 to March, 2006
-        -   Trained and managed various improvement teams including Value Stream Mapping, 5S, One Piece Flow, Standardized Work, and Setup Reduction.
-        -   Managed improvement suggestion (Kaizen Teian) program and made improvements resulting in a 130% increase in employee participation.
-        -   Reduced inventory of consumable materials 75% and test materials 30% by establishing a Kanban system for each.
+        -   Led and trained cross-functional teams in various improvement methodologies, including Value Stream Mapping, 5S, One Piece Flow, Standardized Work, and Setup Reduction.
+        -   Optimized processes and created standardized work to reduce overall product lead-time.
+        -   Managed and improved the employee improvement suggestion (Kaizen Teian) program, increasing participation by 130%.
+        -   Developed and delivered training programs on various lean manufacturing principles.
+        -   Implemented a Kanban system for consumable and test materials, reducing inventory levels by 75% and 30%, respectively, through data-driven analysis and optimization.
+        -   Actively participated in the Safety Committee as management representative.
 
--   ➢ Manufacturing Engineer/Lean Facilitator
+-   **Manufacturing Engineer/Lean Facilitator**
 
     -   Sauer-Danfoss Company, formerly Compact Controls (Hillsboro, Oregon)
-        -   February, 1999 to October, 2003
-            -   Developed, with a team of worldwide trainers, various lean manufacturing courses.
-            -   Created and maintained various documents in accordance with ISO 9001.\\
-            -   Reviewed engineering change documents, conducted process FMEAs, maintained routings in MRP system, and facilitated implementation of new and transferred products into assembly.
-
-#### Goals:
-
-Senior level manufacturing engineer with experience improving quality, profitability, and process flows within both high yield manufacturing and engineered capital goods markets. Working to expand knowledge and experience in the field of data sciences, specifically data engineering.
+    -   February, 1999 to October, 2003
+        -   Worked with a team of international trainers to develop lean manufacturing courses.
+        -   Reviewed engineering change documents, conducted process FMEAs, and facilitated implementation of new and transferred products into assembly.
+        -   Developed and maintained shop floor routings within the MRP system.
+        -   Reviewed and approved methods of manufacturing and quality control in accordance with ISO 9001 standards.
+        -   Developed and maintained a database of standard material costs and manufacturing labor hours to ensure accurate information for estimating costs of new product design.
+        -   Planned, designed, and implemented assembly cells, kanban system, set-up reduction, standardized work, and other various continuous improvement events.
 
 #### Education:
 
--   Master of Science in Data Science (expected graduation: August 2023), Willamette University
--   Bachelor of Science in Manufacturing Engineering Technology,
--   Oregon Institute of Technology, Klamath Falls, OR
--   Various Harvard ManagerMentor corporate manager skills modules
+-   **Master of Science in Data Science**
+    -   Willamette University • August 2023
+-   **Bachelor of Science in Manufacturing Engineering Technology**
+    -   Oregon Institute of Technology • December 1998
+-   Various Harvard Manager Mentor corporate manager skills modules
 -   Various self-paced online lessons focused on Statistics, Data Science, Python, R, SQL, and Lean Six Sigma
 
-#### Skills and abilities:
+#### Computer expertise / skill level:
 
--   Self-directed and able to manage multiple projects with changing priorities and deadlines.
--   Motivated, highly organized, and goal oriented.
--   Strong skills in interpersonal communications, composition, and technical writing.
--   Leading and participating on cost reduction projects that collaborate with various process owners.
--   Computer expertise / skill level:
-    -   Microsoft Office Products (including Project and Visio) / proficient
-    -   Visual Studio Code (VS Code) / advanced beginner
-    -   Microsoft SQL Server Management Studio (SSMS) / competent
-    -   Python, C, R, and SQL / beginner
-    -   SAP ERP system / expert
+-   MS Office Products (including Project and Visio) / *proficient*
+-   SAP ERP system / *expert*
+-   Visual Studio Code (VS Code) / *advanced beginner*
+-   Python, C / *beginner*
+-   R programming and RStudio / *proficient*
+-   Data Visualization / *competent*
