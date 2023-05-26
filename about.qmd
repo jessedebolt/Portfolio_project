@@ -2,19 +2,20 @@
 title: "About"
 ---
 
-This site has been developed as part of the coursework requirements for GSM6027/DATA599-03, Communicating with Data at Willamette University.
+Jesse is an accomplished engineer and aspiring data scientist with a passion for process improvement and data-driven insights. With a keen eye for identifying optimization opportunities and a knack for visualizing complex concepts, he has honed his skills in data analysis, visualization, and data wrangling during his pursuit of a Master of Science degree in data science.
 
-All projects displayed herein were completed as part of the graduation requirements for the Masters in Data Science program. 
+Throughout his career, Jesse has demonstrated exceptional leadership and project management abilities. He has successfully managed diverse teams in multiple disciplines across different entities, fostering collaboration and championing continuous improvement projects. His expertise was instrumental in developing a cost system configurator and costing database tool, revolutionizing product selection and cost estimation accuracy.
 
+An advocate for cross-functional collaboration, Jesse seamlessly collaborates with internal departments and external suppliers to ensure compliance with design and quality requirements, while meeting production milestones. He is adept at maintaining key performance indicators (KPIs) and consistently delivers valuable insights to management through accurate reporting.
 
-## Work History
-#### **The beginning**
-After receiving my degree in manufacturing engineering technology I began work at a small, privately owned company that manufactured,, assembled and tested hydraulic valves and manifolds. My primary focusing was on Lean Manufacturing and manual assembly processes. It was here that I became familiar with ISO-9001 and its counterparts. I was privileged enough to be invited to participate in the development of our company's Lean Academy, working to develop and deliver training courses on several lean manufacturing concepts. These tools and philosophies included 5S, Visual Workshop, Process Standardization, Value Stream Mapping, Total Preventative Maintenance, and Setup Time Reduction, among others.
+In his quest for operational excellence, Jesse has engineered innovative solutions that have yielded remarkable results. Notably, his leadership in developing a routing generator tool significantly reduced shop floor routing generation lead-time, resulting in substantial cost savings. Leveraging his expertise in methodologies such as Value Stream Mapping, 5S, Ishikawa, and A3 (PDCA), he has consistently driven continuous improvement initiatives that have had a lasting impact.
 
-#### **More lean manufacturing focus**
-For my next role I was recruited to different company that manufactured electrical connectors (large quantity runs with minimal components and high quality requirements). Here I lead efforts in lean manufacturing implementation as well as process flow, specifically in regards to assembly, metal parts stamping, and chemical etching processes. I managed the kaizen tien (improvement suggestion) program which included working with stake holders across all departments. This also required working with management to justify and lead the implementation of the improvement opportunities.
+Beyond his professional achievements, Jesse is a dedicated family person and an avid outdoor enthusiast. He enjoys spending time with his spouse and three sons, embarking on camping and hiking adventures, and taking on home remodel and improvement projects. Additionally, he is deeply committed to raising mental health awareness and promoting advocacy. Jesse recognizes the intersection of data science and mental health, and he is keen on leveraging his skills and knowledge to contribute to research and initiatives in this field.
 
-#### **From 'widget' manufacturing to capitol goods**
-After leaving the previous company, I was hired to work as the primary manufacturing engineer for the assembly, test, and final assembly areas of a large pump manufacturer which made products for the oil and gas industry as well as the power generation (including nuclear) and water markets. 
+With a Bachelor of Science degree in Manufacturing Engineering from the Oregon Institute of Technology, Jesse has a solid educational foundation. His technical skills encompass a wide range of tools and platforms, including proficiency in MS Office Products, SAP ERP system, and R programming. He has a keen eye for data visualization and possesses the ability to derive meaningful insights from complex datasets.
+
+Driven by a genuine passion for mentoring others, both professionally and personally, Jesse finds joy in sharing his knowledge and experiences with others. His dedication to fostering growth and development has earned him a reputation as a reliable mentor and a source of guidance.
+
+In summary, Jesse is an experienced engineer, a dedicated student of data science, and a natural problem-solver. He brings a unique blend of technical prowess, leadership skills, and a down-to-earth personality to every endeavor. With an unwavering commitment to continuous improvement and a drive to make a positive impact, Jesse is poised to excel in the field of data science and contribute to shaping a data-driven future, in relation to the manufacturing field as well as mental health awareness, research, and advocacy.
 
 
