@@ -5,7 +5,9 @@ editor: visual
 
 #### Professional Summary:
 
-As an experienced engineer and data science student, I possess a keen ability to identify process improvement opportunities and visualize complex concepts. My experience includes successfully communicating key performance indicators to stakeholders through a variety of methods. Additionally, as a data science student, I have gained valuable skills in data analysis, visualization, and data wrangling. I am now seeking a career pivot to apply my skills as part of a collaborative team focused on data analysis and effective communication strategies.
+As an experienced engineer, I possess a keen ability to identify process
+improvement opportunities and visualize complex concepts. Additionally, as a data science student, I have gained valuable skills in data analysis,
+visualization, and data wrangling. I am seeking a career opportunity to apply my skills as part of a collaborative team focused on data analysis and effective communication strategies.
 
 #### **Professional Experience:**
 
