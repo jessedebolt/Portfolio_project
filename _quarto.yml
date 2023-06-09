@@ -18,7 +18,7 @@ website:
         href: https://github.com/jessedebolt/Portfolio_project
 
   page-footer:
-    left: "©2021, Jesse A. DeBolt" 
+    left: "©2023, Jesse A. DeBolt" 
     right: "This is a Quarto website. To learn more visit [https://quarto.org/docs/websites](https://quarto.org/docs/websites)"
     border: false
 
