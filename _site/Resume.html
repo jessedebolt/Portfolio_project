@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -54,7 +54,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -73,41 +74,43 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Jesse DeBolt’s Portfolio</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html">
+    <a class="nav-link" href="./projects.html" rel="" target="">
  <span class="menu-text">Projects Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./Resume.html" aria-current="page">
+    <a class="nav-link active" href="./Resume.html" rel="" target="" aria-current="page">
  <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/jessedebolt"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/jessedebolt" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jessedebolt/Portfolio_project"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/jessedebolt/Portfolio_project" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -151,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Sulzer Pumps (US), Inc.&nbsp;(Portland, Oregon)</li>
 <li>October, 2020 to July 1, 2022
 <ul>
-<li>Managed a department of up to 15 coworkers in four different disciplines across three separate entities.</li>
+<li>Managed a department of up to 15 coworkers in four different disciplines across three entities.</li>
 <li>Championed multiple continuous improvement projects working with various department representatives across several areas including manufacturing, purchasing, engineering, quality, and sales.</li>
 <li>Successfully managed a large-scale project to create a new cost system configurator and costing database tool that enabled the selection of product and options, producing final cost estimates with accurate results.</li>
 <li>Collaborated with internal departments and external suppliers to ensure compliance with design and quality requirements while meeting production milestones.</li>
@@ -169,7 +172,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Developed and maintained ISO 9001-compliant standard operating procedures, incorporating data analytics to identify and address areas for improvement.</li>
 <li>Supported Sales by creating cost estimations with an average accuracy of 90% and on-time delivery of 98% for engineered products based on customer specifications and engineering reviews.</li>
 <li>Played a key role in technology transfer projects to ensure successful knowledge transfer and adoption of new product lines across legal entities.</li>
-<li>Contributed to the development and maintenance of databases for material costs and manufacturing labor hour standards to ensure accurate information for estimating future projects.</li>
+<li>Primary local entity developer of databases for material costs and manufacturing labor hour standards to ensure accurate information for estimating future projects.</li>
+<li>Was the primary User Interface (UI) designer for a large-scale cost estimation software suite.</li>
 </ul></li>
 </ul></li>
 <li><p><strong>Process Engineer II – Lean Manufacturing</strong></p>
@@ -190,12 +194,12 @@ ul.task-list li input[type="checkbox"] {
 <li>Sauer-Danfoss Company, formerly Compact Controls (Hillsboro, Oregon)</li>
 <li>February, 1999 to October, 2003
 <ul>
-<li>Worked with a team of international trainers to develop lean manufacturing courses.</li>
-<li>Reviewed engineering change documents, conducted process FMEAs, and facilitated implementation of new and transferred products into assembly.</li>
-<li>Developed and maintained shop floor routings within the MRP system.</li>
-<li>Reviewed and approved methods of manufacturing and quality control in accordance with ISO 9001 standards.</li>
-<li>Developed and maintained a database of standard material costs and manufacturing labor hours to ensure accurate information for estimating costs of new product design.</li>
-<li>Planned, designed, and implemented assembly cells, kanban system, set-up reduction, standardized work, and other various continuous improvement events.</li>
+<li>Supervised assembly and testing department consisting of 16-20 employees on two shifts.</li>
+<li>Planned, designed, and implemented assembly cells, kanban system, set-up reduction, standardized work, and various continuous improvement events.</li>
+<li>Developed, with a team of worldwide trainers, various lean manufacturing courses.</li>
+<li>Created and maintained various documents in accordance with ISO 9001.</li>
+<li>Purchased and implemented capital equipment to simplify and automate manual processes.</li>
+<li>Reviewed engineering change documents, conducted process FMEAs, maintained routings in MRP system, and facilitated implementation of new and transferred products into assembly.</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -213,6 +217,26 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>Various Harvard Manager Mentor corporate manager skills modules</li>
 <li>Various self-paced online lessons focused on Statistics, Data Science, Python, R, SQL, and Lean Six Sigma</li>
+</ul>
+</section>
+<section id="coursework" class="level4">
+<h4 class="anchored" data-anchor-id="coursework">Coursework</h4>
+<ul>
+<li>Data Visualization</li>
+<li>Data Communication</li>
+<li>Python for Data Science</li>
+<li>Data Ethics and Policy</li>
+<li>Fundamentals of Data Engineering</li>
+<li>Machine Learning</li>
+<li>Statistics and Statistical Methods</li>
+</ul>
+</section>
+<section id="skills" class="level4">
+<h4 class="anchored" data-anchor-id="skills">Skills:</h4>
+<ul>
+<li><p>Understanding of Lean Manufacturing Processes and Tools.</p></li>
+<li><p>Firm understanding of manufacturing processes, job costing, supply chains, procurement, direct and indirect labor, and business intelligence.</p></li>
+<li><p>Analytical thinking, verbal and written communication, organization and prioritization, collaborative, adaptable, self-starter, leadership, problem solving.</p></li>
 </ul>
 </section>
 <section id="computer-expertise-skill-level" class="level4">
@@ -257,9 +281,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -324,6 +362,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -367,6 +491,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">©2023, Jesse A. DeBolt</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">This is a Quarto website. To learn more visit <a href="https://quarto.org/docs/websites">https://quarto.org/docs/websites</a></div>
   </div>
 </footer>

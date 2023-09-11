@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.3.450">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
 <title>Jesse DeBolt’s Portfolio - Utilities - Plotly</title>
 <style>
 code{white-space: pre-wrap;}
@@ -14,9 +17,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -43,44 +47,15 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -96,7 +71,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -112,75 +88,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
-}</script><script src="../../site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script><script src="../../site_libs/plotly-binding-4.10.1/plotly.js"></script><script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script><script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script><link href="../../site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-<script src="../../site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script><link href="../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
-<script src="../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script><link rel="stylesheet" href="../../styles.css">
+}</script>
+<script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="../../site_libs/plotly-binding-4.10.2/plotly.js"></script>
+<script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="../../site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="../../site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
+
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Jesse DeBolt’s Portfolio</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html">
+    <a class="nav-link" href="../../projects.html" rel="" target="">
  <span class="menu-text">Projects Blog</span></a>
   </li>  
 </ul>
-<ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item">
-    <a class="nav-link" href="../../Resume.html">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../Resume.html" rel="" target="">
  <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/jessedebolt"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/jessedebolt" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jessedebolt/Portfolio_project"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/jessedebolt/Portfolio_project" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-<div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#data-setup" id="toc-data-setup" class="nav-link" data-scroll-target="#data-setup">Data setup</a></li>
   <li><a href="#creating-averages-per-month-and-year" id="toc-creating-averages-per-month-and-year" class="nav-link" data-scroll-target="#creating-averages-per-month-and-year">Creating averages per month and year</a></li>
   <li><a href="#initial-plot" id="toc-initial-plot" class="nav-link" data-scroll-target="#initial-plot">Initial plot</a></li>
   <li><a href="#cleaning-up-plot" id="toc-cleaning-up-plot" class="nav-link" data-scroll-target="#cleaning-up-plot">Cleaning up plot</a></li>
   <li><a href="#converting-to-plotly" id="toc-converting-to-plotly" class="nav-link" data-scroll-target="#converting-to-plotly">Converting to plotly</a></li>
-  </ul></nav>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
 <h1 class="title">Utilities - Plotly</h1>
 </div>
 
@@ -194,15 +193,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
   
 
-</header><section id="setup" class="level2"><h2 class="anchored" data-anchor-id="setup">Setup</h2>
+</header>
+
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/knitr/man/opts_chunk.html">opts_chunk</a></span><span class="op">$</span><span class="fu">set</span><span class="op">(</span>echo <span class="op">=</span> <span class="cn">TRUE</span>, message <span class="op">=</span> <span class="cn">FALSE</span>, warning <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>, <span class="at">message =</span> <span class="cn">FALSE</span>, <span class="at">warning =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ dplyr     1.1.2     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
 ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
 ✔ purrr     1.0.1     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -210,9 +215,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<details><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://davidgohel.github.io/ggiraph/">ggiraph</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://plotly-r.com">plotly</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggiraph)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'plotly'
 
@@ -228,94 +236,125 @@ The following object is masked from 'package:graphics':
 
     layout</code></pre>
 </div>
-<details><summary>Code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jrnold/ggthemes">ggthemes</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sjmgarnier.github.io/viridis/">viridis</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: viridisLite</code></pre>
 </div>
-<details><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section><section id="data-setup" class="level2"><h2 class="anchored" data-anchor-id="data-setup">Data setup</h2>
+</section>
+<section id="data-setup" class="level2">
+<h2 class="anchored" data-anchor-id="data-setup">Data setup</h2>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Read in data</span></span>
-<span><span class="va">utilities</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"..\\..\\data\\utilities.csv"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>        <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span><span class="st">"Desc"</span> <span class="op">=</span> <span class="st">"Description.of.transaction"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#convert Date to date format</span></span>
-<span><span class="va">utilities</span><span class="op">$</span><span class="va">Date</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">mdy</a></span><span class="op">(</span><span class="va">utilities</span><span class="op">$</span><span class="va">Date</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Breaking out month and year</span></span>
-<span><span class="va">utilities</span> <span class="op">&lt;-</span> <span class="va">utilities</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>yr_month <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cut.html">cut</a></span><span class="op">(</span><span class="va">Date</span>, breaks <span class="op">=</span> <span class="st">"month"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cut.html">cut</a></span><span class="op">(</span><span class="va">Date</span>, breaks <span class="op">=</span> <span class="st">"year"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">Date</span> <span class="op">&lt;</span> <span class="st">"2023/01/01"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Removing unneeded columns</span></span>
-<span><span class="va">utilities</span> <span class="op">&lt;-</span> <span class="va">utilities</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">Desc</span> <span class="op">!=</span> <span class="st">"Car Insurance"</span> <span class="op">&amp;</span> <span class="va">Desc</span> <span class="op">!=</span> <span class="st">"Trash"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in data</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>utilities <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"..</span><span class="sc">\\</span><span class="st">..</span><span class="sc">\\</span><span class="st">data</span><span class="sc">\\</span><span class="st">utilities.csv"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">rename</span>(<span class="st">"Desc"</span> <span class="ot">=</span> <span class="st">"Description.of.transaction"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#convert Date to date format</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>utilities<span class="sc">$</span>Date <span class="ot">&lt;-</span> <span class="fu">mdy</span>(utilities<span class="sc">$</span>Date)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Breaking out month and year</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>utilities <span class="ot">&lt;-</span> utilities <span class="sc">%&gt;%</span> </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">yr_month =</span> <span class="fu">as.Date</span>(<span class="fu">cut</span>(Date, <span class="at">breaks =</span> <span class="st">"month"</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.Date</span>(<span class="fu">cut</span>(Date, <span class="at">breaks =</span> <span class="st">"year"</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Date <span class="sc">&lt;</span> <span class="st">"2023/01/01"</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Removing unneeded columns</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>utilities <span class="ot">&lt;-</span> utilities <span class="sc">%&gt;%</span> </span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Desc <span class="sc">!=</span> <span class="st">"Car Insurance"</span> <span class="sc">&amp;</span> Desc <span class="sc">!=</span> <span class="st">"Trash"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section><section id="creating-averages-per-month-and-year" class="level2"><h2 class="anchored" data-anchor-id="creating-averages-per-month-and-year">Creating averages per month and year</h2>
+</section>
+<section id="creating-averages-per-month-and-year" class="level2">
+<h2 class="anchored" data-anchor-id="creating-averages-per-month-and-year">Creating averages per month and year</h2>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">utilities</span> <span class="op">&lt;-</span> <span class="va">utilities</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">Desc</span>, <span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>avg_yearly <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">Out</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">utilities</span> <span class="op">&lt;-</span> <span class="va">utilities</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">Desc</span>, <span class="va">yr_month</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>avg_monthly <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">Out</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>utilities <span class="ot">&lt;-</span> utilities <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Desc, year) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">avg_yearly =</span> <span class="fu">mean</span>(Out))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>utilities <span class="ot">&lt;-</span> utilities <span class="sc">%&gt;%</span> </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Desc, yr_month) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">avg_monthly =</span> <span class="fu">mean</span>(Out))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section><section id="initial-plot" class="level2"><h2 class="anchored" data-anchor-id="initial-plot">Initial plot</h2>
+</section>
+<section id="initial-plot" class="level2">
+<h2 class="anchored" data-anchor-id="initial-plot">Initial plot</h2>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">monthly</span> <span class="op">&lt;-</span> <span class="va">utilities</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">yr_month</span>, <span class="va">Out</span>, color<span class="op">=</span><span class="va">Desc</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">.75</span><span class="op">)</span><span class="op">+</span></span>
-<span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">Desc</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">monthly</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>monthly <span class="ot">&lt;-</span> utilities <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(yr_month, Out, <span class="at">color=</span>Desc))<span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">size =</span> .<span class="dv">75</span>)<span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">facet_wrap</span>(<span class="sc">~</span>Desc)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>monthly</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <p><img src="HW5_utilities_plotly_files/figure-html/initial plot-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="cleaning-up-plot" class="level2"><h2 class="anchored" data-anchor-id="cleaning-up-plot">Cleaning up plot</h2>
+</section>
+<section id="cleaning-up-plot" class="level2">
+<h2 class="anchored" data-anchor-id="cleaning-up-plot">Cleaning up plot</h2>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">monthly2</span> <span class="op">&lt;-</span> <span class="va">monthly</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_solarized.html">theme_solarized</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Monthly Utility Costs 2018 through 2022"</span>,</span>
-<span>       subtitle <span class="op">=</span> <span class="st">"1680sf home with family of four between 2018 and 2020\n2480sf home with family of five between 2020 and 2022"</span>,</span>
-<span>       x <span class="op">=</span> <span class="st">"Date"</span>,</span>
-<span>       y <span class="op">=</span> <span class="st">"Monthly Expense"</span>,</span>
-<span>       color <span class="op">=</span> <span class="st">"Utility Type"</span><span class="op">)</span><span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">0.5</span>, size <span class="op">=</span> <span class="fl">14</span>, face <span class="op">=</span> <span class="st">'bold'</span>, color <span class="op">=</span> <span class="st">'black'</span><span class="op">)</span>,</span>
-<span>        plot.subtitle <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, face <span class="op">=</span> <span class="st">'italic'</span><span class="op">)</span>,</span>
-<span>        axis.title.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">'black'</span><span class="op">)</span>,</span>
-<span>        axis.title.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">'black'</span><span class="op">)</span>,</span>
-<span>        legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span><span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>sec.axis <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/sec_axis.html">sec_axis</a></span><span class="op">(</span><span class="op">~</span><span class="va">.</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://sjmgarnier.github.io/viridis/reference/scale_viridis.html">scale_color_viridis</a></span><span class="op">(</span>discrete <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span>  </span>
-<span><span class="va">monthly2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>monthly2 <span class="ot">&lt;-</span> monthly <span class="sc">+</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_solarized</span>() <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Monthly Utility Costs 2018 through 2022"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"1680sf home with family of four between 2018 and 2020</span><span class="sc">\n</span><span class="st">2480sf home with family of five between 2020 and 2022"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Monthly Expense"</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Utility Type"</span>)<span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">'bold'</span>, <span class="at">color =</span> <span class="st">'black'</span>),</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">'italic'</span>),</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">'black'</span>),</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">'black'</span>),</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"none"</span>)<span class="sc">+</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span>.))<span class="sc">+</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>monthly2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <p><img src="HW5_utilities_plotly_files/figure-html/themes-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="converting-to-plotly" class="level2"><h2 class="anchored" data-anchor-id="converting-to-plotly">Converting to plotly</h2>
+</section>
+<section id="converting-to-plotly" class="level2">
+<h2 class="anchored" data-anchor-id="converting-to-plotly">Converting to plotly</h2>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ggmonthly</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/plotly/man/ggplotly.html">ggplotly</a></span><span class="op">(</span><span class="va">monthly2</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">layout</span><span class="op">(</span>title <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fl">.95</span>, xref <span class="op">=</span> <span class="st">"plot"</span><span class="op">)</span>,</span>
-<span>         margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>l <span class="op">=</span> <span class="fl">75</span>, t <span class="op">=</span> <span class="fl">75</span>, b <span class="op">=</span> <span class="fl">75</span>, r <span class="op">=</span> <span class="fl">50</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">ggmonthly</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-47008d71330a40393a6a" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-47008d71330a40393a6a">{"x":{"data":[{"x":[17532,17563,17591,17622,17652,17683,17713,17744,17775,17805,17836,17866,17897,17928,17956,17987,18017,18048,18078,18109,18140,18170,18201,18231,18262,18262,18293,18322,18353,18383,18414,18444,18475,18506,18536,18597,18628,18628,18659,18718,18748,18779,18809,18840,18871,18901,18932,18962,18993,19024,19052,19083,19113,19144,19174,19205,19236,19266,19297,19327],"y":[144.7,112.68,128.4,92.02,82.64,101.21,93.9,161.49,141.63,84.3,75.73,127.7,143.07,118.15,148.51,114.69,82.93,111.55,121,139.98,153.72,100.16,125.43,149.11,161.5,94.33,113.04,101.09,119.94,102.96,121.91,148.11,151.68,138.11,120.89,112.81,190.67,149.17,196.86,146.46,125.25,141.58,217.88,192.22,169.78,134.45,117.98,137.8,201.26,184.73,201.31,137.22,124.43,115.81,155,183.61,181.03,146.03,117.15,137.31],"text":["yr_month: 2018-01-01<br />Out: 144.70<br />Desc: Electricity","yr_month: 2018-02-01<br />Out: 112.68<br />Desc: Electricity","yr_month: 2018-03-01<br />Out: 128.40<br />Desc: Electricity","yr_month: 2018-04-01<br />Out:  92.02<br />Desc: Electricity","yr_month: 2018-05-01<br />Out:  82.64<br />Desc: Electricity","yr_month: 2018-06-01<br />Out: 101.21<br />Desc: Electricity","yr_month: 2018-07-01<br />Out:  93.90<br />Desc: Electricity","yr_month: 2018-08-01<br />Out: 161.49<br />Desc: Electricity","yr_month: 2018-09-01<br />Out: 141.63<br />Desc: Electricity","yr_month: 2018-10-01<br />Out:  84.30<br />Desc: Electricity","yr_month: 2018-11-01<br />Out:  75.73<br />Desc: Electricity","yr_month: 2018-12-01<br />Out: 127.70<br />Desc: Electricity","yr_month: 2019-01-01<br />Out: 143.07<br />Desc: Electricity","yr_month: 2019-02-01<br />Out: 118.15<br />Desc: Electricity","yr_month: 2019-03-01<br />Out: 148.51<br />Desc: Electricity","yr_month: 2019-04-01<br />Out: 114.69<br />Desc: Electricity","yr_month: 2019-05-01<br />Out:  82.93<br />Desc: Electricity","yr_month: 2019-06-01<br />Out: 111.55<br />Desc: Electricity","yr_month: 2019-07-01<br />Out: 121.00<br />Desc: Electricity","yr_month: 2019-08-01<br />Out: 139.98<br />Desc: Electricity","yr_month: 2019-09-01<br />Out: 153.72<br />Desc: Electricity","yr_month: 2019-10-01<br />Out: 100.16<br />Desc: Electricity","yr_month: 2019-11-01<br />Out: 125.43<br />Desc: Electricity","yr_month: 2019-12-01<br />Out: 149.11<br />Desc: Electricity","yr_month: 2020-01-01<br />Out: 161.50<br />Desc: Electricity","yr_month: 2020-01-01<br />Out:  94.33<br />Desc: Electricity","yr_month: 2020-02-01<br />Out: 113.04<br />Desc: Electricity","yr_month: 2020-03-01<br />Out: 101.09<br />Desc: Electricity","yr_month: 2020-04-01<br />Out: 119.94<br />Desc: Electricity","yr_month: 2020-05-01<br />Out: 102.96<br />Desc: Electricity","yr_month: 2020-06-01<br />Out: 121.91<br />Desc: Electricity","yr_month: 2020-07-01<br />Out: 148.11<br />Desc: Electricity","yr_month: 2020-08-01<br />Out: 151.68<br />Desc: Electricity","yr_month: 2020-09-01<br />Out: 138.11<br />Desc: Electricity","yr_month: 2020-10-01<br />Out: 120.89<br />Desc: Electricity","yr_month: 2020-12-01<br />Out: 112.81<br />Desc: Electricity","yr_month: 2021-01-01<br />Out: 190.67<br />Desc: Electricity","yr_month: 2021-01-01<br />Out: 149.17<br />Desc: Electricity","yr_month: 2021-02-01<br />Out: 196.86<br />Desc: Electricity","yr_month: 2021-04-01<br />Out: 146.46<br />Desc: Electricity","yr_month: 2021-05-01<br />Out: 125.25<br />Desc: Electricity","yr_month: 2021-06-01<br />Out: 141.58<br />Desc: Electricity","yr_month: 2021-07-01<br />Out: 217.88<br />Desc: Electricity","yr_month: 2021-08-01<br />Out: 192.22<br />Desc: Electricity","yr_month: 2021-09-01<br />Out: 169.78<br />Desc: Electricity","yr_month: 2021-10-01<br />Out: 134.45<br />Desc: Electricity","yr_month: 2021-11-01<br />Out: 117.98<br />Desc: Electricity","yr_month: 2021-12-01<br />Out: 137.80<br />Desc: Electricity","yr_month: 2022-01-01<br />Out: 201.26<br />Desc: Electricity","yr_month: 2022-02-01<br />Out: 184.73<br />Desc: Electricity","yr_month: 2022-03-01<br />Out: 201.31<br />Desc: Electricity","yr_month: 2022-04-01<br />Out: 137.22<br />Desc: Electricity","yr_month: 2022-05-01<br />Out: 124.43<br />Desc: Electricity","yr_month: 2022-06-01<br />Out: 115.81<br />Desc: Electricity","yr_month: 2022-07-01<br />Out: 155.00<br />Desc: Electricity","yr_month: 2022-08-01<br />Out: 183.61<br />Desc: Electricity","yr_month: 2022-09-01<br />Out: 181.03<br />Desc: Electricity","yr_month: 2022-10-01<br />Out: 146.03<br />Desc: Electricity","yr_month: 2022-11-01<br />Out: 117.15<br />Desc: Electricity","yr_month: 2022-12-01<br />Out: 137.31<br />Desc: Electricity"],"type":"scatter","mode":"lines","line":{"width":2.83464566929134,"color":"rgba(68,1,84,1)","dash":"solid"},"hoveron":"points","name":"Electricity","legendgroup":"Electricity","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17532,17563,17591,17622,17652,17683,17713,17744,17775,17805,17836,17866,17897,17928,17956,17987,18017,18048,18078,18109,18140,18170,18201,18231,18262,18262,18293,18322,18353,18383,18414,18444,18475,18506,18536,18567,18597,18659,18687,18718,18748,18779,18809,18840,18871,18901,18932,18962,18993,19024,19052,19083,19113,19144,19174,19205,19236,19266,19297,19327],"y":[34.99,34.99,34.99,34.99,34.99,49.95,49.46,49.95,49.95,49.95,49.95,49.95,49.95,49.95,53.45,53.45,53.45,71.64,71.64,71.64,71.64,71.64,71.64,71.64,71.64,49.19,45.4,48.15,48.15,48.15,48.15,48.15,48.15,48.15,48.15,48.15,48.15,48.5,48.15,48.15,48.15,48.15,48.15,48.15,48.15,48.15,45,45,45,48,27.31,30,30,30,30,30,30,30,30,30],"text":["yr_month: 2018-01-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-02-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-03-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-04-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-05-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-06-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-07-01<br />Out:  49.46<br />Desc: Internet","yr_month: 2018-08-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-09-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-10-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-11-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-12-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2019-01-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2019-02-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2019-03-01<br />Out:  53.45<br />Desc: Internet","yr_month: 2019-04-01<br />Out:  53.45<br />Desc: Internet","yr_month: 2019-05-01<br />Out:  53.45<br />Desc: Internet","yr_month: 2019-06-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-07-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-08-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-09-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-10-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-11-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-12-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2020-01-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2020-01-01<br />Out:  49.19<br />Desc: Internet","yr_month: 2020-02-01<br />Out:  45.40<br />Desc: Internet","yr_month: 2020-03-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-04-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-05-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-06-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-07-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-08-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-09-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-10-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-11-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-12-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-02-01<br />Out:  48.50<br />Desc: Internet","yr_month: 2021-03-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-04-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-05-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-06-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-07-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-08-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-09-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-10-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-11-01<br />Out:  45.00<br />Desc: Internet","yr_month: 2021-12-01<br />Out:  45.00<br />Desc: Internet","yr_month: 2022-01-01<br />Out:  45.00<br />Desc: Internet","yr_month: 2022-02-01<br />Out:  48.00<br />Desc: Internet","yr_month: 2022-03-01<br />Out:  27.31<br />Desc: Internet","yr_month: 2022-04-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-05-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-06-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-07-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-08-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-09-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-10-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-11-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-12-01<br />Out:  30.00<br />Desc: Internet"],"type":"scatter","mode":"lines","line":{"width":2.83464566929134,"color":"rgba(49,104,142,1)","dash":"solid"},"hoveron":"points","name":"Internet","legendgroup":"Internet","showlegend":true,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17532,17563,17591,17622,17652,17683,17713,17744,17775,17805,17836,17866,17897,17928,17956,17987,18017,18048,18078,18109,18140,18170,18201,18231,18262,18262,18293,18322,18353,18383,18414,18444,18475,18506,18536,18597,18628,18628,18687,18718,18748,18779,18809,18840,18871,18901,18932,18962,18993,19024,19052,19083,19113,19144,19174,19236,19266,19297,19327],"y":[95.81,82,77.92,58.45,41.49,23.96,8.4,21.66,19.64,20.79,34.6,62.9,93.76,81.94,84.56,64.63,52.71,17.69,25.28,27.37,26.33,30.22,58.17,77.62,91.32,57.98,91.49,77.68,62.73,53.05,21.58,30.77,25.65,22.01,27.93,93.45,125.29,89.13,93.02,77.49,55.65,32.69,26.96,25.81,24.86,25.53,52.18,98.73,128.69,102.74,85.48,87.09,69.42,50.26,37.29,56.41,29.75,39.61,124.13],"text":["yr_month: 2018-01-01<br />Out:  95.81<br />Desc: Natural Gas","yr_month: 2018-02-01<br />Out:  82.00<br />Desc: Natural Gas","yr_month: 2018-03-01<br />Out:  77.92<br />Desc: Natural Gas","yr_month: 2018-04-01<br />Out:  58.45<br />Desc: Natural Gas","yr_month: 2018-05-01<br />Out:  41.49<br />Desc: Natural Gas","yr_month: 2018-06-01<br />Out:  23.96<br />Desc: Natural Gas","yr_month: 2018-07-01<br />Out:   8.40<br />Desc: Natural Gas","yr_month: 2018-08-01<br />Out:  21.66<br />Desc: Natural Gas","yr_month: 2018-09-01<br />Out:  19.64<br />Desc: Natural Gas","yr_month: 2018-10-01<br />Out:  20.79<br />Desc: Natural Gas","yr_month: 2018-11-01<br />Out:  34.60<br />Desc: Natural Gas","yr_month: 2018-12-01<br />Out:  62.90<br />Desc: Natural Gas","yr_month: 2019-01-01<br />Out:  93.76<br />Desc: Natural Gas","yr_month: 2019-02-01<br />Out:  81.94<br />Desc: Natural Gas","yr_month: 2019-03-01<br />Out:  84.56<br />Desc: Natural Gas","yr_month: 2019-04-01<br />Out:  64.63<br />Desc: Natural Gas","yr_month: 2019-05-01<br />Out:  52.71<br />Desc: Natural Gas","yr_month: 2019-06-01<br />Out:  17.69<br />Desc: Natural Gas","yr_month: 2019-07-01<br />Out:  25.28<br />Desc: Natural Gas","yr_month: 2019-08-01<br />Out:  27.37<br />Desc: Natural Gas","yr_month: 2019-09-01<br />Out:  26.33<br />Desc: Natural Gas","yr_month: 2019-10-01<br />Out:  30.22<br />Desc: Natural Gas","yr_month: 2019-11-01<br />Out:  58.17<br />Desc: Natural Gas","yr_month: 2019-12-01<br />Out:  77.62<br />Desc: Natural Gas","yr_month: 2020-01-01<br />Out:  91.32<br />Desc: Natural Gas","yr_month: 2020-01-01<br />Out:  57.98<br />Desc: Natural Gas","yr_month: 2020-02-01<br />Out:  91.49<br />Desc: Natural Gas","yr_month: 2020-03-01<br />Out:  77.68<br />Desc: Natural Gas","yr_month: 2020-04-01<br />Out:  62.73<br />Desc: Natural Gas","yr_month: 2020-05-01<br />Out:  53.05<br />Desc: Natural Gas","yr_month: 2020-06-01<br />Out:  21.58<br />Desc: Natural Gas","yr_month: 2020-07-01<br />Out:  30.77<br />Desc: Natural Gas","yr_month: 2020-08-01<br />Out:  25.65<br />Desc: Natural Gas","yr_month: 2020-09-01<br />Out:  22.01<br />Desc: Natural Gas","yr_month: 2020-10-01<br />Out:  27.93<br />Desc: Natural Gas","yr_month: 2020-12-01<br />Out:  93.45<br />Desc: Natural Gas","yr_month: 2021-01-01<br />Out: 125.29<br />Desc: Natural Gas","yr_month: 2021-01-01<br />Out:  89.13<br />Desc: Natural Gas","yr_month: 2021-03-01<br />Out:  93.02<br />Desc: Natural Gas","yr_month: 2021-04-01<br />Out:  77.49<br />Desc: Natural Gas","yr_month: 2021-05-01<br />Out:  55.65<br />Desc: Natural Gas","yr_month: 2021-06-01<br />Out:  32.69<br />Desc: Natural Gas","yr_month: 2021-07-01<br />Out:  26.96<br />Desc: Natural Gas","yr_month: 2021-08-01<br />Out:  25.81<br />Desc: Natural Gas","yr_month: 2021-09-01<br />Out:  24.86<br />Desc: Natural Gas","yr_month: 2021-10-01<br />Out:  25.53<br />Desc: Natural Gas","yr_month: 2021-11-01<br />Out:  52.18<br />Desc: Natural Gas","yr_month: 2021-12-01<br />Out:  98.73<br />Desc: Natural Gas","yr_month: 2022-01-01<br />Out: 128.69<br />Desc: Natural Gas","yr_month: 2022-02-01<br />Out: 102.74<br />Desc: Natural Gas","yr_month: 2022-03-01<br />Out:  85.48<br />Desc: Natural Gas","yr_month: 2022-04-01<br />Out:  87.09<br />Desc: Natural Gas","yr_month: 2022-05-01<br />Out:  69.42<br />Desc: Natural Gas","yr_month: 2022-06-01<br />Out:  50.26<br />Desc: Natural Gas","yr_month: 2022-07-01<br />Out:  37.29<br />Desc: Natural Gas","yr_month: 2022-09-01<br />Out:  56.41<br />Desc: Natural Gas","yr_month: 2022-10-01<br />Out:  29.75<br />Desc: Natural Gas","yr_month: 2022-11-01<br />Out:  39.61<br />Desc: Natural Gas","yr_month: 2022-12-01<br />Out: 124.13<br />Desc: Natural Gas"],"type":"scatter","mode":"lines","line":{"width":2.83464566929134,"color":"rgba(53,183,121,1)","dash":"solid"},"hoveron":"points","name":"Natural Gas","legendgroup":"Natural Gas","showlegend":true,"xaxis":"x","yaxis":"y2","hoverinfo":"text","frame":null},{"x":[17532,17591,17652,17713,17775,17866,17897,17897,17928,17987,17987,18017,18048,18109,18140,18170,18170,18231,18231,18262,18262,18293,18322,18383,18414,18414,18475,18506,18536,18597,18628,18659,18687,18718,18748,18779,18840,18871,18901,18932,18962,18993,19024,19052,19083,19113,19144,19174,19205,19236,19266,19297,19327],"y":[201.93,199.91,206.87,209.68,277.64,196.44,95.62,97.64,96.57,99.24,106.58,120.63,139.16,147.15,185.26,143.05,103.76,107.22,107.22,112.31,105.02,109.23,109.46,128.5,124.71,139.87,184.78,214.6,163.2,107.45,107.45,116.76,113.94,113.94,135.44,308.34,263.85,280.04,180.93,114.61,118.91,114.61,121.92,123.21,118.53,127.89,123.21,127.89,300.23,332.61,256.53,186.79,125.65],"text":["yr_month: 2018-01-01<br />Out: 201.93<br />Desc: Water/Sewer","yr_month: 2018-03-01<br />Out: 199.91<br />Desc: Water/Sewer","yr_month: 2018-05-01<br />Out: 206.87<br />Desc: Water/Sewer","yr_month: 2018-07-01<br />Out: 209.68<br />Desc: Water/Sewer","yr_month: 2018-09-01<br />Out: 277.64<br />Desc: Water/Sewer","yr_month: 2018-12-01<br />Out: 196.44<br />Desc: Water/Sewer","yr_month: 2019-01-01<br />Out:  95.62<br />Desc: Water/Sewer","yr_month: 2019-01-01<br />Out:  97.64<br />Desc: Water/Sewer","yr_month: 2019-02-01<br />Out:  96.57<br />Desc: Water/Sewer","yr_month: 2019-04-01<br />Out:  99.24<br />Desc: Water/Sewer","yr_month: 2019-04-01<br />Out: 106.58<br />Desc: Water/Sewer","yr_month: 2019-05-01<br />Out: 120.63<br />Desc: Water/Sewer","yr_month: 2019-06-01<br />Out: 139.16<br />Desc: Water/Sewer","yr_month: 2019-08-01<br />Out: 147.15<br />Desc: Water/Sewer","yr_month: 2019-09-01<br />Out: 185.26<br />Desc: Water/Sewer","yr_month: 2019-10-01<br />Out: 143.05<br />Desc: Water/Sewer","yr_month: 2019-10-01<br />Out: 103.76<br />Desc: Water/Sewer","yr_month: 2019-12-01<br />Out: 107.22<br />Desc: Water/Sewer","yr_month: 2019-12-01<br />Out: 107.22<br />Desc: Water/Sewer","yr_month: 2020-01-01<br />Out: 112.31<br />Desc: Water/Sewer","yr_month: 2020-01-01<br />Out: 105.02<br />Desc: Water/Sewer","yr_month: 2020-02-01<br />Out: 109.23<br />Desc: Water/Sewer","yr_month: 2020-03-01<br />Out: 109.46<br />Desc: Water/Sewer","yr_month: 2020-05-01<br />Out: 128.50<br />Desc: Water/Sewer","yr_month: 2020-06-01<br />Out: 124.71<br />Desc: Water/Sewer","yr_month: 2020-06-01<br />Out: 139.87<br />Desc: Water/Sewer","yr_month: 2020-08-01<br />Out: 184.78<br />Desc: Water/Sewer","yr_month: 2020-09-01<br />Out: 214.60<br />Desc: Water/Sewer","yr_month: 2020-10-01<br />Out: 163.20<br />Desc: Water/Sewer","yr_month: 2020-12-01<br />Out: 107.45<br />Desc: Water/Sewer","yr_month: 2021-01-01<br />Out: 107.45<br />Desc: Water/Sewer","yr_month: 2021-02-01<br />Out: 116.76<br />Desc: Water/Sewer","yr_month: 2021-03-01<br />Out: 113.94<br />Desc: Water/Sewer","yr_month: 2021-04-01<br />Out: 113.94<br />Desc: Water/Sewer","yr_month: 2021-05-01<br />Out: 135.44<br />Desc: Water/Sewer","yr_month: 2021-06-01<br />Out: 308.34<br />Desc: Water/Sewer","yr_month: 2021-08-01<br />Out: 263.85<br />Desc: Water/Sewer","yr_month: 2021-09-01<br />Out: 280.04<br />Desc: Water/Sewer","yr_month: 2021-10-01<br />Out: 180.93<br />Desc: Water/Sewer","yr_month: 2021-11-01<br />Out: 114.61<br />Desc: Water/Sewer","yr_month: 2021-12-01<br />Out: 118.91<br />Desc: Water/Sewer","yr_month: 2022-01-01<br />Out: 114.61<br />Desc: Water/Sewer","yr_month: 2022-02-01<br />Out: 121.92<br />Desc: Water/Sewer","yr_month: 2022-03-01<br />Out: 123.21<br />Desc: Water/Sewer","yr_month: 2022-04-01<br />Out: 118.53<br />Desc: Water/Sewer","yr_month: 2022-05-01<br />Out: 127.89<br />Desc: Water/Sewer","yr_month: 2022-06-01<br />Out: 123.21<br />Desc: Water/Sewer","yr_month: 2022-07-01<br />Out: 127.89<br />Desc: Water/Sewer","yr_month: 2022-08-01<br />Out: 300.23<br />Desc: Water/Sewer","yr_month: 2022-09-01<br />Out: 332.61<br />Desc: Water/Sewer","yr_month: 2022-10-01<br />Out: 256.53<br />Desc: Water/Sewer","yr_month: 2022-11-01<br />Out: 186.79<br />Desc: Water/Sewer","yr_month: 2022-12-01<br />Out: 125.65<br />Desc: Water/Sewer"],"type":"scatter","mode":"lines","line":{"width":2.83464566929134,"color":"rgba(253,231,37,1)","dash":"solid"},"hoveron":"points","name":"Water/Sewer","legendgroup":"Water/Sewer","showlegend":true,"xaxis":"x2","yaxis":"y2","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":75,"r":50,"b":75,"l":75},"plot_bgcolor":"rgba(253,246,227,1)","paper_bgcolor":"rgba(253,246,227,1)","font":{"color":"rgba(147,161,161,1)","family":"","size":15.9402241594022},"title":{"text":"<b> Monthly Utility Costs 2018 through 2022 <\/b>","font":{"color":"rgba(0,0,0,1)","family":"","size":18.5969281859693},"x":0.5,"xref":"plot","y":0.95},"xaxis":{"domain":[0,0.495552392812667],"automargin":true,"type":"linear","autorange":false,"range":[17442.25,19416.75],"tickmode":"array","ticktext":["2018","2020","2022"],"tickvals":[17532,18262,18993],"categoryorder":"array","categoryarray":["2018","2020","2022"],"nticks":null,"ticks":"outside","tickcolor":"rgba(147,161,161,1)","ticklen":3.98505603985056,"tickwidth":0.724555643609193,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(147,161,161,1)","linewidth":0.724555643609193,"showgrid":true,"gridcolor":"rgba(238,232,213,1)","gridwidth":0.724555643609193,"zeroline":false,"anchor":"y2","title":"","hoverformat":".2f"},"annotations":[{"text":"Date","x":0.5,"y":0,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":15.9402241594022},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"top","annotationType":"axis","yshift":-23.9103362391034},{"text":"Monthly Expense","x":0,"y":0.5,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":15.9402241594022},"xref":"paper","yref":"paper","textangle":-90,"xanchor":"right","yanchor":"center","annotationType":"axis","xshift":-30.2864259028643},{"text":"Electricity","x":0.247776196406333,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":12.7521793275218},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Internet","x":0.752223803593667,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":12.7521793275218},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Natural Gas","x":0.247776196406333,"y":0.483810709838107,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":12.7521793275218},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Water/Sewer","x":0.752223803593667,"y":0.483810709838107,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":12.7521793275218},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"}],"yaxis":{"domain":[0.516189290161893,1],"automargin":true,"type":"linear","autorange":false,"range":[-7.8105,348.8205],"tickmode":"array","ticktext":["0","100","200","300"],"tickvals":[0,100,200,300],"categoryorder":"array","categoryarray":["0","100","200","300"],"nticks":null,"ticks":"outside","tickcolor":"rgba(147,161,161,1)","ticklen":3.98505603985056,"tickwidth":0.724555643609193,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(147,161,161,1)","linewidth":0.724555643609193,"showgrid":true,"gridcolor":"rgba(238,232,213,1)","gridwidth":0.724555643609193,"zeroline":false,"anchor":"x","title":"","hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.495552392812667,"y0":0.516189290161893,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.724555643609193,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":0.495552392812667,"y0":0,"y1":25.5043586550436,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.504447607187333,"x1":1,"y0":0.516189290161893,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.724555643609193,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.504447607187333,"x1":1,"y0":0,"y1":25.5043586550436,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.495552392812667,"y0":0,"y1":0.483810709838107},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.724555643609193,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":0.495552392812667,"y0":0,"y1":25.5043586550436,"yanchor":0.483810709838107,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.504447607187333,"x1":1,"y0":0,"y1":0.483810709838107},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.724555643609193,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.504447607187333,"x1":1,"y0":0,"y1":25.5043586550436,"yanchor":0.483810709838107,"ysizemode":"pixel"}],"xaxis2":{"type":"linear","autorange":false,"range":[17442.25,19416.75],"tickmode":"array","ticktext":["2018","2020","2022"],"tickvals":[17532,18262,18993],"categoryorder":"array","categoryarray":["2018","2020","2022"],"nticks":null,"ticks":"outside","tickcolor":"rgba(147,161,161,1)","ticklen":3.98505603985056,"tickwidth":0.724555643609193,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(147,161,161,1)","linewidth":0.724555643609193,"showgrid":true,"domain":[0.504447607187333,1],"gridcolor":"rgba(238,232,213,1)","gridwidth":0.724555643609193,"zeroline":false,"anchor":"y2","title":"","hoverformat":".2f"},"yaxis2":{"type":"linear","autorange":false,"range":[-7.8105,348.8205],"tickmode":"array","ticktext":["0","100","200","300"],"tickvals":[0,100,200,300],"categoryorder":"array","categoryarray":["0","100","200","300"],"nticks":null,"ticks":"outside","tickcolor":"rgba(147,161,161,1)","ticklen":3.98505603985056,"tickwidth":0.724555643609193,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(147,161,161,1)","linewidth":0.724555643609193,"showgrid":true,"domain":[0,0.483810709838107],"gridcolor":"rgba(238,232,213,1)","gridwidth":0.724555643609193,"zeroline":false,"anchor":"x","title":"","hoverformat":".2f"},"showlegend":false,"legend":{"bgcolor":"rgba(253,246,227,1)","bordercolor":"transparent","borderwidth":2.06156048675734,"font":{"color":"rgba(147,161,161,1)","family":"","size":12.7521793275218}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"9e04615648f":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"9e04615648f","visdat":{"9e04615648f":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ggmonthly <span class="ot">&lt;-</span> <span class="fu">ggplotly</span>(monthly2) <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">title =</span> <span class="fu">list</span>(<span class="at">y =</span> .<span class="dv">95</span>, <span class="at">xref =</span> <span class="st">"plot"</span>),</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">margin =</span> <span class="fu">list</span>(<span class="at">l =</span> <span class="dv">75</span>, <span class="at">t =</span> <span class="dv">75</span>, <span class="at">b =</span> <span class="dv">75</span>, <span class="at">r =</span> <span class="dv">50</span>))</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>ggmonthly</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-2d3ee3b16d1cf3d8d889" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-2d3ee3b16d1cf3d8d889">{"x":{"data":[{"x":[17532,17563,17591,17622,17652,17683,17713,17744,17775,17805,17836,17866,17897,17928,17956,17987,18017,18048,18078,18109,18140,18170,18201,18231,18262,18262,18293,18322,18353,18383,18414,18444,18475,18506,18536,18597,18628,18628,18659,18718,18748,18779,18809,18840,18871,18901,18932,18962,18993,19024,19052,19083,19113,19144,19174,19205,19236,19266,19297,19327],"y":[144.69999999999999,112.68000000000001,128.40000000000001,92.019999999999996,82.640000000000001,101.20999999999999,93.900000000000006,161.49000000000001,141.63,84.299999999999997,75.730000000000004,127.7,143.06999999999999,118.15000000000001,148.50999999999999,114.69,82.930000000000007,111.55,121,139.97999999999999,153.72,100.16,125.43000000000001,149.11000000000001,161.5,94.329999999999998,113.04000000000001,101.09,119.94,102.95999999999999,121.91,148.11000000000001,151.68000000000001,138.11000000000001,120.89,112.81,190.66999999999999,149.16999999999999,196.86000000000001,146.46000000000001,125.25,141.58000000000001,217.88,192.22,169.78,134.44999999999999,117.98,137.80000000000001,201.25999999999999,184.72999999999999,201.31,137.22,124.43000000000001,115.81,155,183.61000000000001,181.03,146.03,117.15000000000001,137.31],"text":["yr_month: 2018-01-01<br />Out: 144.70<br />Desc: Electricity","yr_month: 2018-02-01<br />Out: 112.68<br />Desc: Electricity","yr_month: 2018-03-01<br />Out: 128.40<br />Desc: Electricity","yr_month: 2018-04-01<br />Out:  92.02<br />Desc: Electricity","yr_month: 2018-05-01<br />Out:  82.64<br />Desc: Electricity","yr_month: 2018-06-01<br />Out: 101.21<br />Desc: Electricity","yr_month: 2018-07-01<br />Out:  93.90<br />Desc: Electricity","yr_month: 2018-08-01<br />Out: 161.49<br />Desc: Electricity","yr_month: 2018-09-01<br />Out: 141.63<br />Desc: Electricity","yr_month: 2018-10-01<br />Out:  84.30<br />Desc: Electricity","yr_month: 2018-11-01<br />Out:  75.73<br />Desc: Electricity","yr_month: 2018-12-01<br />Out: 127.70<br />Desc: Electricity","yr_month: 2019-01-01<br />Out: 143.07<br />Desc: Electricity","yr_month: 2019-02-01<br />Out: 118.15<br />Desc: Electricity","yr_month: 2019-03-01<br />Out: 148.51<br />Desc: Electricity","yr_month: 2019-04-01<br />Out: 114.69<br />Desc: Electricity","yr_month: 2019-05-01<br />Out:  82.93<br />Desc: Electricity","yr_month: 2019-06-01<br />Out: 111.55<br />Desc: Electricity","yr_month: 2019-07-01<br />Out: 121.00<br />Desc: Electricity","yr_month: 2019-08-01<br />Out: 139.98<br />Desc: Electricity","yr_month: 2019-09-01<br />Out: 153.72<br />Desc: Electricity","yr_month: 2019-10-01<br />Out: 100.16<br />Desc: Electricity","yr_month: 2019-11-01<br />Out: 125.43<br />Desc: Electricity","yr_month: 2019-12-01<br />Out: 149.11<br />Desc: Electricity","yr_month: 2020-01-01<br />Out: 161.50<br />Desc: Electricity","yr_month: 2020-01-01<br />Out:  94.33<br />Desc: Electricity","yr_month: 2020-02-01<br />Out: 113.04<br />Desc: Electricity","yr_month: 2020-03-01<br />Out: 101.09<br />Desc: Electricity","yr_month: 2020-04-01<br />Out: 119.94<br />Desc: Electricity","yr_month: 2020-05-01<br />Out: 102.96<br />Desc: Electricity","yr_month: 2020-06-01<br />Out: 121.91<br />Desc: Electricity","yr_month: 2020-07-01<br />Out: 148.11<br />Desc: Electricity","yr_month: 2020-08-01<br />Out: 151.68<br />Desc: Electricity","yr_month: 2020-09-01<br />Out: 138.11<br />Desc: Electricity","yr_month: 2020-10-01<br />Out: 120.89<br />Desc: Electricity","yr_month: 2020-12-01<br />Out: 112.81<br />Desc: Electricity","yr_month: 2021-01-01<br />Out: 190.67<br />Desc: Electricity","yr_month: 2021-01-01<br />Out: 149.17<br />Desc: Electricity","yr_month: 2021-02-01<br />Out: 196.86<br />Desc: Electricity","yr_month: 2021-04-01<br />Out: 146.46<br />Desc: Electricity","yr_month: 2021-05-01<br />Out: 125.25<br />Desc: Electricity","yr_month: 2021-06-01<br />Out: 141.58<br />Desc: Electricity","yr_month: 2021-07-01<br />Out: 217.88<br />Desc: Electricity","yr_month: 2021-08-01<br />Out: 192.22<br />Desc: Electricity","yr_month: 2021-09-01<br />Out: 169.78<br />Desc: Electricity","yr_month: 2021-10-01<br />Out: 134.45<br />Desc: Electricity","yr_month: 2021-11-01<br />Out: 117.98<br />Desc: Electricity","yr_month: 2021-12-01<br />Out: 137.80<br />Desc: Electricity","yr_month: 2022-01-01<br />Out: 201.26<br />Desc: Electricity","yr_month: 2022-02-01<br />Out: 184.73<br />Desc: Electricity","yr_month: 2022-03-01<br />Out: 201.31<br />Desc: Electricity","yr_month: 2022-04-01<br />Out: 137.22<br />Desc: Electricity","yr_month: 2022-05-01<br />Out: 124.43<br />Desc: Electricity","yr_month: 2022-06-01<br />Out: 115.81<br />Desc: Electricity","yr_month: 2022-07-01<br />Out: 155.00<br />Desc: Electricity","yr_month: 2022-08-01<br />Out: 183.61<br />Desc: Electricity","yr_month: 2022-09-01<br />Out: 181.03<br />Desc: Electricity","yr_month: 2022-10-01<br />Out: 146.03<br />Desc: Electricity","yr_month: 2022-11-01<br />Out: 117.15<br />Desc: Electricity","yr_month: 2022-12-01<br />Out: 137.31<br />Desc: Electricity"],"type":"scatter","mode":"lines","line":{"width":2.8346456692913389,"color":"rgba(68,1,84,1)","dash":"solid"},"hoveron":"points","name":"Electricity","legendgroup":"Electricity","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17532,17563,17591,17622,17652,17683,17713,17744,17775,17805,17836,17866,17897,17928,17956,17987,18017,18048,18078,18109,18140,18170,18201,18231,18262,18262,18293,18322,18353,18383,18414,18444,18475,18506,18536,18567,18597,18659,18687,18718,18748,18779,18809,18840,18871,18901,18932,18962,18993,19024,19052,19083,19113,19144,19174,19205,19236,19266,19297,19327],"y":[34.990000000000002,34.990000000000002,34.990000000000002,34.990000000000002,34.990000000000002,49.950000000000003,49.460000000000001,49.950000000000003,49.950000000000003,49.950000000000003,49.950000000000003,49.950000000000003,49.950000000000003,49.950000000000003,53.450000000000003,53.450000000000003,53.450000000000003,71.640000000000001,71.640000000000001,71.640000000000001,71.640000000000001,71.640000000000001,71.640000000000001,71.640000000000001,71.640000000000001,49.189999999999998,45.399999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.5,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,48.149999999999999,45,45,45,48,27.309999999999999,30,30,30,30,30,30,30,30,30],"text":["yr_month: 2018-01-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-02-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-03-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-04-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-05-01<br />Out:  34.99<br />Desc: Internet","yr_month: 2018-06-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-07-01<br />Out:  49.46<br />Desc: Internet","yr_month: 2018-08-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-09-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-10-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-11-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2018-12-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2019-01-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2019-02-01<br />Out:  49.95<br />Desc: Internet","yr_month: 2019-03-01<br />Out:  53.45<br />Desc: Internet","yr_month: 2019-04-01<br />Out:  53.45<br />Desc: Internet","yr_month: 2019-05-01<br />Out:  53.45<br />Desc: Internet","yr_month: 2019-06-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-07-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-08-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-09-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-10-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-11-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2019-12-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2020-01-01<br />Out:  71.64<br />Desc: Internet","yr_month: 2020-01-01<br />Out:  49.19<br />Desc: Internet","yr_month: 2020-02-01<br />Out:  45.40<br />Desc: Internet","yr_month: 2020-03-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-04-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-05-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-06-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-07-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-08-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-09-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-10-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-11-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2020-12-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-02-01<br />Out:  48.50<br />Desc: Internet","yr_month: 2021-03-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-04-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-05-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-06-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-07-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-08-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-09-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-10-01<br />Out:  48.15<br />Desc: Internet","yr_month: 2021-11-01<br />Out:  45.00<br />Desc: Internet","yr_month: 2021-12-01<br />Out:  45.00<br />Desc: Internet","yr_month: 2022-01-01<br />Out:  45.00<br />Desc: Internet","yr_month: 2022-02-01<br />Out:  48.00<br />Desc: Internet","yr_month: 2022-03-01<br />Out:  27.31<br />Desc: Internet","yr_month: 2022-04-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-05-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-06-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-07-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-08-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-09-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-10-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-11-01<br />Out:  30.00<br />Desc: Internet","yr_month: 2022-12-01<br />Out:  30.00<br />Desc: Internet"],"type":"scatter","mode":"lines","line":{"width":2.8346456692913389,"color":"rgba(49,104,142,1)","dash":"solid"},"hoveron":"points","name":"Internet","legendgroup":"Internet","showlegend":true,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17532,17563,17591,17622,17652,17683,17713,17744,17775,17805,17836,17866,17897,17928,17956,17987,18017,18048,18078,18109,18140,18170,18201,18231,18262,18262,18293,18322,18353,18383,18414,18444,18475,18506,18536,18597,18628,18628,18687,18718,18748,18779,18809,18840,18871,18901,18932,18962,18993,19024,19052,19083,19113,19144,19174,19236,19266,19297,19327],"y":[95.810000000000002,82,77.920000000000002,58.450000000000003,41.490000000000002,23.960000000000001,8.4000000000000004,21.66,19.640000000000001,20.789999999999999,34.600000000000001,62.899999999999999,93.760000000000005,81.939999999999998,84.560000000000002,64.629999999999995,52.710000000000001,17.690000000000001,25.280000000000001,27.370000000000001,26.329999999999998,30.219999999999999,58.170000000000002,77.620000000000005,91.319999999999993,57.979999999999997,91.489999999999995,77.680000000000007,62.729999999999997,53.049999999999997,21.579999999999998,30.77,25.649999999999999,22.010000000000002,27.93,93.450000000000003,125.29000000000001,89.129999999999995,93.019999999999996,77.489999999999995,55.649999999999999,32.689999999999998,26.960000000000001,25.809999999999999,24.859999999999999,25.530000000000001,52.18,98.730000000000004,128.69,102.73999999999999,85.480000000000004,87.090000000000003,69.420000000000002,50.259999999999998,37.289999999999999,56.409999999999997,29.75,39.609999999999999,124.13],"text":["yr_month: 2018-01-01<br />Out:  95.81<br />Desc: Natural Gas","yr_month: 2018-02-01<br />Out:  82.00<br />Desc: Natural Gas","yr_month: 2018-03-01<br />Out:  77.92<br />Desc: Natural Gas","yr_month: 2018-04-01<br />Out:  58.45<br />Desc: Natural Gas","yr_month: 2018-05-01<br />Out:  41.49<br />Desc: Natural Gas","yr_month: 2018-06-01<br />Out:  23.96<br />Desc: Natural Gas","yr_month: 2018-07-01<br />Out:   8.40<br />Desc: Natural Gas","yr_month: 2018-08-01<br />Out:  21.66<br />Desc: Natural Gas","yr_month: 2018-09-01<br />Out:  19.64<br />Desc: Natural Gas","yr_month: 2018-10-01<br />Out:  20.79<br />Desc: Natural Gas","yr_month: 2018-11-01<br />Out:  34.60<br />Desc: Natural Gas","yr_month: 2018-12-01<br />Out:  62.90<br />Desc: Natural Gas","yr_month: 2019-01-01<br />Out:  93.76<br />Desc: Natural Gas","yr_month: 2019-02-01<br />Out:  81.94<br />Desc: Natural Gas","yr_month: 2019-03-01<br />Out:  84.56<br />Desc: Natural Gas","yr_month: 2019-04-01<br />Out:  64.63<br />Desc: Natural Gas","yr_month: 2019-05-01<br />Out:  52.71<br />Desc: Natural Gas","yr_month: 2019-06-01<br />Out:  17.69<br />Desc: Natural Gas","yr_month: 2019-07-01<br />Out:  25.28<br />Desc: Natural Gas","yr_month: 2019-08-01<br />Out:  27.37<br />Desc: Natural Gas","yr_month: 2019-09-01<br />Out:  26.33<br />Desc: Natural Gas","yr_month: 2019-10-01<br />Out:  30.22<br />Desc: Natural Gas","yr_month: 2019-11-01<br />Out:  58.17<br />Desc: Natural Gas","yr_month: 2019-12-01<br />Out:  77.62<br />Desc: Natural Gas","yr_month: 2020-01-01<br />Out:  91.32<br />Desc: Natural Gas","yr_month: 2020-01-01<br />Out:  57.98<br />Desc: Natural Gas","yr_month: 2020-02-01<br />Out:  91.49<br />Desc: Natural Gas","yr_month: 2020-03-01<br />Out:  77.68<br />Desc: Natural Gas","yr_month: 2020-04-01<br />Out:  62.73<br />Desc: Natural Gas","yr_month: 2020-05-01<br />Out:  53.05<br />Desc: Natural Gas","yr_month: 2020-06-01<br />Out:  21.58<br />Desc: Natural Gas","yr_month: 2020-07-01<br />Out:  30.77<br />Desc: Natural Gas","yr_month: 2020-08-01<br />Out:  25.65<br />Desc: Natural Gas","yr_month: 2020-09-01<br />Out:  22.01<br />Desc: Natural Gas","yr_month: 2020-10-01<br />Out:  27.93<br />Desc: Natural Gas","yr_month: 2020-12-01<br />Out:  93.45<br />Desc: Natural Gas","yr_month: 2021-01-01<br />Out: 125.29<br />Desc: Natural Gas","yr_month: 2021-01-01<br />Out:  89.13<br />Desc: Natural Gas","yr_month: 2021-03-01<br />Out:  93.02<br />Desc: Natural Gas","yr_month: 2021-04-01<br />Out:  77.49<br />Desc: Natural Gas","yr_month: 2021-05-01<br />Out:  55.65<br />Desc: Natural Gas","yr_month: 2021-06-01<br />Out:  32.69<br />Desc: Natural Gas","yr_month: 2021-07-01<br />Out:  26.96<br />Desc: Natural Gas","yr_month: 2021-08-01<br />Out:  25.81<br />Desc: Natural Gas","yr_month: 2021-09-01<br />Out:  24.86<br />Desc: Natural Gas","yr_month: 2021-10-01<br />Out:  25.53<br />Desc: Natural Gas","yr_month: 2021-11-01<br />Out:  52.18<br />Desc: Natural Gas","yr_month: 2021-12-01<br />Out:  98.73<br />Desc: Natural Gas","yr_month: 2022-01-01<br />Out: 128.69<br />Desc: Natural Gas","yr_month: 2022-02-01<br />Out: 102.74<br />Desc: Natural Gas","yr_month: 2022-03-01<br />Out:  85.48<br />Desc: Natural Gas","yr_month: 2022-04-01<br />Out:  87.09<br />Desc: Natural Gas","yr_month: 2022-05-01<br />Out:  69.42<br />Desc: Natural Gas","yr_month: 2022-06-01<br />Out:  50.26<br />Desc: Natural Gas","yr_month: 2022-07-01<br />Out:  37.29<br />Desc: Natural Gas","yr_month: 2022-09-01<br />Out:  56.41<br />Desc: Natural Gas","yr_month: 2022-10-01<br />Out:  29.75<br />Desc: Natural Gas","yr_month: 2022-11-01<br />Out:  39.61<br />Desc: Natural Gas","yr_month: 2022-12-01<br />Out: 124.13<br />Desc: Natural Gas"],"type":"scatter","mode":"lines","line":{"width":2.8346456692913389,"color":"rgba(53,183,121,1)","dash":"solid"},"hoveron":"points","name":"Natural Gas","legendgroup":"Natural Gas","showlegend":true,"xaxis":"x","yaxis":"y2","hoverinfo":"text","frame":null},{"x":[17532,17591,17652,17713,17775,17866,17897,17897,17928,17987,17987,18017,18048,18109,18140,18170,18170,18231,18231,18262,18262,18293,18322,18383,18414,18414,18475,18506,18536,18597,18628,18659,18687,18718,18748,18779,18840,18871,18901,18932,18962,18993,19024,19052,19083,19113,19144,19174,19205,19236,19266,19297,19327],"y":[201.93000000000001,199.91,206.87,209.68000000000001,277.63999999999999,196.44,95.620000000000005,97.640000000000001,96.569999999999993,99.239999999999995,106.58,120.63,139.16,147.15000000000001,185.25999999999999,143.05000000000001,103.76000000000001,107.22,107.22,112.31,105.02,109.23,109.45999999999999,128.5,124.70999999999999,139.87,184.78,214.59999999999999,163.19999999999999,107.45,107.45,116.76000000000001,113.94,113.94,135.44,308.33999999999997,263.85000000000002,280.04000000000002,180.93000000000001,114.61,118.91,114.61,121.92,123.20999999999999,118.53,127.89,123.20999999999999,127.89,300.23000000000002,332.61000000000001,256.52999999999997,186.78999999999999,125.65000000000001],"text":["yr_month: 2018-01-01<br />Out: 201.93<br />Desc: Water/Sewer","yr_month: 2018-03-01<br />Out: 199.91<br />Desc: Water/Sewer","yr_month: 2018-05-01<br />Out: 206.87<br />Desc: Water/Sewer","yr_month: 2018-07-01<br />Out: 209.68<br />Desc: Water/Sewer","yr_month: 2018-09-01<br />Out: 277.64<br />Desc: Water/Sewer","yr_month: 2018-12-01<br />Out: 196.44<br />Desc: Water/Sewer","yr_month: 2019-01-01<br />Out:  95.62<br />Desc: Water/Sewer","yr_month: 2019-01-01<br />Out:  97.64<br />Desc: Water/Sewer","yr_month: 2019-02-01<br />Out:  96.57<br />Desc: Water/Sewer","yr_month: 2019-04-01<br />Out:  99.24<br />Desc: Water/Sewer","yr_month: 2019-04-01<br />Out: 106.58<br />Desc: Water/Sewer","yr_month: 2019-05-01<br />Out: 120.63<br />Desc: Water/Sewer","yr_month: 2019-06-01<br />Out: 139.16<br />Desc: Water/Sewer","yr_month: 2019-08-01<br />Out: 147.15<br />Desc: Water/Sewer","yr_month: 2019-09-01<br />Out: 185.26<br />Desc: Water/Sewer","yr_month: 2019-10-01<br />Out: 143.05<br />Desc: Water/Sewer","yr_month: 2019-10-01<br />Out: 103.76<br />Desc: Water/Sewer","yr_month: 2019-12-01<br />Out: 107.22<br />Desc: Water/Sewer","yr_month: 2019-12-01<br />Out: 107.22<br />Desc: Water/Sewer","yr_month: 2020-01-01<br />Out: 112.31<br />Desc: Water/Sewer","yr_month: 2020-01-01<br />Out: 105.02<br />Desc: Water/Sewer","yr_month: 2020-02-01<br />Out: 109.23<br />Desc: Water/Sewer","yr_month: 2020-03-01<br />Out: 109.46<br />Desc: Water/Sewer","yr_month: 2020-05-01<br />Out: 128.50<br />Desc: Water/Sewer","yr_month: 2020-06-01<br />Out: 124.71<br />Desc: Water/Sewer","yr_month: 2020-06-01<br />Out: 139.87<br />Desc: Water/Sewer","yr_month: 2020-08-01<br />Out: 184.78<br />Desc: Water/Sewer","yr_month: 2020-09-01<br />Out: 214.60<br />Desc: Water/Sewer","yr_month: 2020-10-01<br />Out: 163.20<br />Desc: Water/Sewer","yr_month: 2020-12-01<br />Out: 107.45<br />Desc: Water/Sewer","yr_month: 2021-01-01<br />Out: 107.45<br />Desc: Water/Sewer","yr_month: 2021-02-01<br />Out: 116.76<br />Desc: Water/Sewer","yr_month: 2021-03-01<br />Out: 113.94<br />Desc: Water/Sewer","yr_month: 2021-04-01<br />Out: 113.94<br />Desc: Water/Sewer","yr_month: 2021-05-01<br />Out: 135.44<br />Desc: Water/Sewer","yr_month: 2021-06-01<br />Out: 308.34<br />Desc: Water/Sewer","yr_month: 2021-08-01<br />Out: 263.85<br />Desc: Water/Sewer","yr_month: 2021-09-01<br />Out: 280.04<br />Desc: Water/Sewer","yr_month: 2021-10-01<br />Out: 180.93<br />Desc: Water/Sewer","yr_month: 2021-11-01<br />Out: 114.61<br />Desc: Water/Sewer","yr_month: 2021-12-01<br />Out: 118.91<br />Desc: Water/Sewer","yr_month: 2022-01-01<br />Out: 114.61<br />Desc: Water/Sewer","yr_month: 2022-02-01<br />Out: 121.92<br />Desc: Water/Sewer","yr_month: 2022-03-01<br />Out: 123.21<br />Desc: Water/Sewer","yr_month: 2022-04-01<br />Out: 118.53<br />Desc: Water/Sewer","yr_month: 2022-05-01<br />Out: 127.89<br />Desc: Water/Sewer","yr_month: 2022-06-01<br />Out: 123.21<br />Desc: Water/Sewer","yr_month: 2022-07-01<br />Out: 127.89<br />Desc: Water/Sewer","yr_month: 2022-08-01<br />Out: 300.23<br />Desc: Water/Sewer","yr_month: 2022-09-01<br />Out: 332.61<br />Desc: Water/Sewer","yr_month: 2022-10-01<br />Out: 256.53<br />Desc: Water/Sewer","yr_month: 2022-11-01<br />Out: 186.79<br />Desc: Water/Sewer","yr_month: 2022-12-01<br />Out: 125.65<br />Desc: Water/Sewer"],"type":"scatter","mode":"lines","line":{"width":2.8346456692913389,"color":"rgba(253,231,37,1)","dash":"solid"},"hoveron":"points","name":"Water/Sewer","legendgroup":"Water/Sewer","showlegend":true,"xaxis":"x2","yaxis":"y2","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":75,"r":50,"b":75,"l":75},"plot_bgcolor":"rgba(253,246,227,1)","paper_bgcolor":"rgba(253,246,227,1)","font":{"color":"rgba(147,161,161,1)","family":"","size":15.940224159402243},"title":{"text":"<b> Monthly Utility Costs 2018 through 2022 <\/b>","font":{"color":"rgba(0,0,0,1)","family":"","size":18.596928185969279},"x":0.5,"xref":"plot","y":0.94999999999999996},"xaxis":{"domain":[0,0.49555239281266678],"automargin":true,"type":"linear","autorange":false,"range":[17442.25,19416.75],"tickmode":"array","ticktext":["2018","2020","2022"],"tickvals":[17532,18262,18993],"categoryorder":"array","categoryarray":["2018","2020","2022"],"nticks":null,"ticks":"outside","tickcolor":"rgba(147,161,161,1)","ticklen":3.9850560398505608,"tickwidth":0.72455564360919278,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(147,161,161,1)","linewidth":0.72455564360919278,"showgrid":true,"gridcolor":"rgba(238,232,213,1)","gridwidth":0.72455564360919278,"zeroline":false,"anchor":"y2","title":"","hoverformat":".2f"},"annotations":[{"text":"Date","x":0.5,"y":0,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402243},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"top","annotationType":"axis","yshift":-23.910336239103373},{"text":"Monthly Expense","x":0,"y":0.5,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402243},"xref":"paper","yref":"paper","textangle":-90,"xanchor":"right","yanchor":"center","annotationType":"axis","xshift":-30.28642590286427},{"text":"Electricity","x":0.24777619640633339,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":12.7521793275218},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Internet","x":0.75222380359366658,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":12.7521793275218},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Natural Gas","x":0.24777619640633339,"y":0.48381070983810709,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":12.7521793275218},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Water/Sewer","x":0.75222380359366658,"y":0.48381070983810709,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":12.7521793275218},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"}],"yaxis":{"domain":[0.51618929016189286,1],"automargin":true,"type":"linear","autorange":false,"range":[-7.8105000000000029,348.82050000000004],"tickmode":"array","ticktext":["0","100","200","300"],"tickvals":[0,100,200,300],"categoryorder":"array","categoryarray":["0","100","200","300"],"nticks":null,"ticks":"outside","tickcolor":"rgba(147,161,161,1)","ticklen":3.9850560398505608,"tickwidth":0.72455564360919278,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(147,161,161,1)","linewidth":0.72455564360919278,"showgrid":true,"gridcolor":"rgba(238,232,213,1)","gridwidth":0.72455564360919278,"zeroline":false,"anchor":"x","title":"","hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.49555239281266678,"y0":0.51618929016189286,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.72455564360919278,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":0.49555239281266678,"y0":0,"y1":25.5043586550436,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.50444760718733317,"x1":1,"y0":0.51618929016189286,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.72455564360919278,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.50444760718733317,"x1":1,"y0":0,"y1":25.5043586550436,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.49555239281266678,"y0":0,"y1":0.48381070983810709},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.72455564360919278,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":0.49555239281266678,"y0":0,"y1":25.5043586550436,"yanchor":0.48381070983810709,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.50444760718733317,"x1":1,"y0":0,"y1":0.48381070983810709},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.72455564360919278,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.50444760718733317,"x1":1,"y0":0,"y1":25.5043586550436,"yanchor":0.48381070983810709,"ysizemode":"pixel"}],"xaxis2":{"type":"linear","autorange":false,"range":[17442.25,19416.75],"tickmode":"array","ticktext":["2018","2020","2022"],"tickvals":[17532,18262,18993],"categoryorder":"array","categoryarray":["2018","2020","2022"],"nticks":null,"ticks":"outside","tickcolor":"rgba(147,161,161,1)","ticklen":3.9850560398505608,"tickwidth":0.72455564360919278,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(147,161,161,1)","linewidth":0.72455564360919278,"showgrid":true,"domain":[0.50444760718733317,1],"gridcolor":"rgba(238,232,213,1)","gridwidth":0.72455564360919278,"zeroline":false,"anchor":"y2","title":"","hoverformat":".2f"},"yaxis2":{"type":"linear","autorange":false,"range":[-7.8105000000000029,348.82050000000004],"tickmode":"array","ticktext":["0","100","200","300"],"tickvals":[0,100,200,300],"categoryorder":"array","categoryarray":["0","100","200","300"],"nticks":null,"ticks":"outside","tickcolor":"rgba(147,161,161,1)","ticklen":3.9850560398505608,"tickwidth":0.72455564360919278,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(147,161,161,1)","linewidth":0.72455564360919278,"showgrid":true,"domain":[0,0.48381070983810709],"gridcolor":"rgba(238,232,213,1)","gridwidth":0.72455564360919278,"zeroline":false,"anchor":"x","title":"","hoverformat":".2f"},"showlegend":false,"legend":{"bgcolor":"rgba(253,246,227,1)","bordercolor":"transparent","borderwidth":2.0615604867573372,"font":{"color":"rgba(147,161,161,1)","family":"","size":12.7521793275218}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"4f1c528025bc":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"4f1c528025bc","visdat":{"4f1c528025bc":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -342,9 +381,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -409,6 +462,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -449,11 +588,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">©2023, Jesse A. DeBolt</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">This is a Quarto website. To learn more visit <a href="https://quarto.org/docs/websites">https://quarto.org/docs/websites</a></div>
   </div>
 </footer>
+
 
 
 </body></html>

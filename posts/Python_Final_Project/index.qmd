@@ -1,0 +1,11 @@
+---
+title: "Python for Data Science Final Project"
+author: "Jesse DeBolt"
+date: "2023-08-01"
+categories: [Python, Visualizations, Machine Learning]
+image: "Pyhton_sample.png"
+---
+
+This project demonstrated data transformation, visualization and machine learning techniques in Python to predict the occurrence of Coronary Heart Disease (CHD). Our approach involved using health and demographic data to train predictive models, specifically utilizing Support Vector Machines (SVM), Random Forests, and K-means clustering algorithms.
+
+[![Python for Data Science Final Project](Pyhton_sample.png){fig-align="left" width="456"}](CHD Final Report.html)

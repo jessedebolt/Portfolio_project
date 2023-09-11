@@ -16,7 +16,5 @@ about:
 ---
 
 
-Hi there! My name is Jesse DeBolt and I am a skilled manufacturing engineer with over 20 years of experience in various manufacturing settings. While working at my previous employer, I had the opportunity to work with different business data in a cost estimation capacity. This experience sparked my interest in data sciences and prompted me to begin learning SQL techniques, data mining, and analysis.
-
-After leaving my previous role due to a plant closure, I decided to pursue a master’s degree in data science with a focus on data engineering, analysis, visualization, and data communication. I am set to graduate in August 2023 and am actively seeking professional opportunities to utilize my newly acquired knowledge.
+Hello, I'm Jesse DeBolt. After dedicating more than 20 years to manufacturing engineering, I've taken a decisive step to further augment my expertise. Driven by an insatiable curiosity for problem-solving and continuous improvement, I recently explored the fascinating world of data science. Having graduated with a Master's in Data Science, I am keen to explore roles that allow me to blend my engineering experience with data-driven decision-making. I am open to new and exciting career possibilities and look forward to contributing my newly acquired skills to a dynamic team.
 
